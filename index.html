@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>เรียน Photoshop 2026 ตั้งแต่เริ่มต้น</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&family=IBM+Plex+Sans+Thai:wght@400;500&display=swap">
+<style>
+:root{--bg:#eef0f4;--panel:#fff;--ink:#1b2233;--mute:#5d6678;--line:#d5d9e2;--acc:#2d5bff;--accsoft:#e3eaff;--ok:#12805c;--chk1:#fff;--chk2:#e6e9ef;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181f;--panel:#1f232d;--ink:#e8ebf2;--mute:#9aa3b5;--line:#343a49;--acc:#7b9bff;--accsoft:#27304d;--ok:#4cc79b;--chk1:#1f232d;--chk2:#262b37}}
+:root[data-theme="dark"]{--bg:#15181f;--panel:#1f232d;--ink:#e8ebf2;--mute:#9aa3b5;--line:#343a49;--acc:#7b9bff;--accsoft:#27304d;--ok:#4cc79b;--chk1:#1f232d;--chk2:#262b37}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 "IBM Plex Sans Thai",system-ui,sans-serif}
+h1,h2,h3{font-family:Prompt,"IBM Plex Sans Thai",sans-serif;line-height:1.35;margin:0}
+.wrap{display:grid;grid-template-columns:290px minmax(0,1fr);gap:28px;max-width:1120px;margin:0 auto;padding:20px}
+aside{position:sticky;top:16px;align-self:start;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+aside header{padding:10px 14px;border-bottom:1px solid var(--line);font:500 14px Prompt,sans-serif;display:flex;justify-content:space-between}
+.bar{height:4px;background:var(--line)}.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+.row{display:flex;align-items:center;border-bottom:1px solid var(--line);font-size:14px}
+.row button{width:42px;height:40px;border:0;border-right:1px solid var(--line);background:none;color:var(--mute);cursor:pointer;font-size:16px}
+.row button[aria-pressed=true]{color:var(--ok)}
+.row a{flex:1;padding:8px 12px;color:var(--ink);text-decoration:none;line-height:1.4}
+.row.on{background:var(--accsoft)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+main{min-width:0}
+.hero{height:220px;border-radius:6px;border:1px solid var(--line);position:relative;overflow:hidden;background:conic-gradient(var(--chk2) 25%,var(--chk1) 0 50%,var(--chk2) 0 75%,var(--chk1) 0) 0 0/24px 24px;display:flex;align-items:flex-end;padding:22px}
+.hero div{background:var(--panel);border:1px solid var(--line);padding:16px 20px;max-width:560px;border-radius:4px}
+.hero h1{font-size:clamp(24px,4vw,36px)}.hero p{margin:6px 0 0;color:var(--mute);font-size:15px}
+section{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:24px;margin-top:20px}
+section h2{font-size:24px;margin-bottom:4px}.goal{color:var(--mute);margin:0 0 14px}
+h3{font-size:17px;margin:20px 0 4px}p{margin:8px 0;max-width:68ch}
+ol,ul{padding-left:22px;max-width:68ch}li{margin:4px 0}
+kbd{font:13px ui-monospace,monospace;background:var(--bg);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px}
+.tip{border-left:3px solid var(--acc);background:var(--accsoft);padding:8px 14px;margin:14px 0;border-radius:0 4px 4px 0;max-width:68ch}
+.try{border:1px dashed var(--ok);padding:8px 14px;margin:14px 0;border-radius:4px;max-width:68ch}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin:10px 0}
+.tools div{border:1px solid var(--line);padding:8px 12px;border-radius:4px;font-size:14px;line-height:1.5}
+.tools b{display:block}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.bar2 input{flex:1;min-width:160px;padding:8px 12px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:inherit}
+.seg button{padding:8px 14px;border:1px solid var(--line);background:none;color:var(--ink);font:inherit;cursor:pointer}
+.seg button:first-child{border-radius:4px 0 0 4px}.seg button:last-child{border-radius:0 4px 4px 0;border-left:0}
+.seg button[aria-pressed=true]{background:var(--acc);color:#fff;border-color:var(--acc)}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+footer{margin:24px 0;color:var(--mute);font-size:13px}
+@media(max-width:820px){.wrap{grid-template-columns:1fr;padding:12px}aside{position:static}section{padding:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
+
+.top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:color-mix(in srgb,var(--panel) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{font:700 16px Prompt,sans-serif}
+.seg button[aria-pressed=true]{background:var(--acc);color:#fff;border-color:var(--acc)}
+aside{top:76px;border-radius:12px;box-shadow:0 8px 24px rgba(20,30,60,.07)}
+.row.on{box-shadow:inset 3px 0 0 var(--acc)}
+.hero{height:250px;border:0;border-radius:16px;background:linear-gradient(135deg,#2d5bff,#8a4dff 60%,#ff6fb1)}
+.hero::before{content:"";position:absolute;inset:0;background:conic-gradient(rgba(255,255,255,.14) 25%,transparent 0 50%,rgba(255,255,255,.14) 0 75%,transparent 0) 0 0/28px 28px}
+.hero div{position:relative;border:0;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+section{border-radius:14px;box-shadow:0 1px 2px rgba(20,30,60,.06),0 10px 28px rgba(20,30,60,.05)}
+.lesson{border-top:4px solid var(--acc)}.lesson h2{font-size:26px}
+.tools div{background:var(--bg);transition:border-color .15s}.tools div:hover{border-color:var(--acc)}
+.tip{border-radius:8px;border-left-width:4px}.try{border-radius:8px;background:color-mix(in srgb,var(--ok) 8%,transparent)}
+html[lang=en] .th,html[lang=th] .en{display:none}
+fieldset{border:1px solid var(--line);border-radius:10px;margin:12px 0;padding:10px 16px}legend{font-weight:500;padding:0 8px}
+.opt{display:block;padding:6px 10px;border-radius:6px;cursor:pointer}.opt:hover{background:var(--accsoft)}
+.opt.ok{background:color-mix(in srgb,var(--ok) 20%,transparent)}.opt.bad{background:color-mix(in srgb,#d64545 20%,transparent)}
+.ex{font-size:14px;color:var(--mute);margin:4px 0 2px}
+.qbar{display:flex;gap:10px;margin-top:10px}.btn{padding:10px 20px;border-radius:8px;border:0;background:var(--acc);color:#fff;font:500 15px Prompt,sans-serif;cursor:pointer}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+#res{margin-top:14px;font:500 18px Prompt,sans-serif}
+
+.hm{position:absolute;right:28px;bottom:-6px;width:190px;height:190px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.25))}
+.mas{display:flex;align-items:center;gap:14px;margin-top:20px}.mas svg{width:64px;height:64px;flex:none}
+.mas p{margin:0;position:relative;background:var(--accsoft);border-radius:14px;padding:8px 14px;max-width:46ch}
+.mas p::before{content:"";position:absolute;left:-7px;top:50%;margin-top:-7px;border:7px solid transparent;border-left:0;border-right-color:var(--accsoft)}
+.comic{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.comic figure,.fg{margin:0;border:2px solid var(--ink);border-radius:10px;overflow:hidden;background:var(--panel)}
+.comic svg,.fg svg{display:block;width:100%}.fg{max-width:300px;margin:14px 0}
+figcaption{padding:6px 10px;font-size:13.5px;line-height:1.5}
+.uiw{overflow-x:auto;border-radius:10px}
+.ps{display:grid;grid-template-columns:46px 1fr 210px;grid-template-rows:26px 30px 1fr;height:390px;min-width:620px;background:#2d2d30;color:#d8d8dc;font:12px/1.4 system-ui,sans-serif;position:relative}
+.hs{background:none;border:0;color:inherit;font:inherit;padding:0;margin:0;cursor:pointer;text-align:left}
+.hs:hover{outline:1px dashed #ffd21f;outline-offset:-1px}.hs:focus-visible,.hs.on{outline:2px solid #ffd21f;outline-offset:-2px}
+.ps .m,.ps .o{grid-column:1/4;padding:0 12px;background:#38383c}.ps .o{background:#323236;border-bottom:1px solid #1e1e20}
+.tl{display:flex;flex-direction:column;gap:3px;padding:6px;background:#38383c}.tb{height:28px;text-align:center;border-radius:4px;background:#46464b;font-weight:700}
+.cv{position:relative;background:#1e1e20;padding:14px}.cvb{display:block;width:100%;height:100%}.cvb svg{width:100%;height:100%;display:block}
+.tk{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);background:#46464b;border-radius:8px;padding:6px 12px;white-space:nowrap}
+.pn{display:flex;flex-direction:column;background:#38383c;border-left:1px solid #1e1e20}
+.pr{padding:10px;height:90px;border-bottom:1px solid #1e1e20}.ly{flex:1;padding:8px;display:flex;flex-direction:column;gap:4px}
+.bl{padding:4px 6px;background:#46464b;border-radius:4px}.lr{padding:7px 8px;background:#2d2d30;border-radius:4px}
+.lb{margin-top:auto;display:flex;gap:14px;justify-content:flex-end;font-size:16px}.lb .hs{padding:0 4px}
+.info{margin-top:10px;padding:10px 14px;border-radius:8px;background:var(--accsoft);border-left:4px solid var(--acc)}.info b{display:block;font-family:Prompt,sans-serif}
+@media(max-width:820px){.hm{width:110px;height:110px;right:12px}}
+@media(max-width:620px){.comic{grid-template-columns:1fr}}
+
+@keyframes fi{to{opacity:1}}@keyframes fo{to{opacity:0}}@keyframes pop{from{transform:scale(0)}60%{transform:scale(1.15)}to{transform:scale(1)}}
+@keyframes sl{from{transform:translateY(-50px);opacity:0}to{transform:none;opacity:1}}@keyframes gr{from{transform:scale(.3)}to{transform:scale(1)}}
+@keyframes rt{0%{transform:scale(.6)}50%{transform:scale(1.1)}100%{transform:scale(1) rotate(15deg)}}@keyframes sg{0%,100%{transform:scale(1)}40%,60%{transform:scale(.3)}}
+@keyframes br{from{filter:brightness(.45) saturate(.5)}to{filter:none}}@keyframes sa{from{filter:grayscale(1)}to{filter:none}}
+@keyframes dr{to{stroke-dashoffset:0}}@keyframes pl{50%{opacity:.3}}@keyframes bob{50%{transform:translateY(-4px)}}@keyframes ty{to{clip-path:inset(0)}}@keyframes mc{to{stroke-dashoffset:-10}}
+.fi{opacity:0;animation:fi .6s var(--d,0s) forwards}.fo{animation:fo .6s var(--d,0s) forwards}
+.pop{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .5s var(--d,0s) forwards}
+.sl{opacity:0;animation:sl .7s var(--d,0s) forwards}
+.gr,.rt,.sg{transform-box:fill-box;transform-origin:center}.gr{animation:gr 1.2s forwards}.rt{animation:rt 3s forwards}.sg{animation:sg 4s 1s forwards}
+.br{animation:br 3s 1s both}.dk{filter:brightness(.45) saturate(.5)}.sa{animation:sa 3s 1s both}
+.dr{stroke-dasharray:100;stroke-dashoffset:100;animation:dr 2s var(--d,0s) forwards}.pl{animation:pl 1.1s infinite}.bob{animation:bob 1.6s ease-in-out infinite}
+.ty{clip-path:inset(0 100% 0 0);animation:ty 2.5s steps(10) forwards}.mc,.mc *{stroke-dasharray:6 4;animation:mc .5s linear infinite}
+.clip{margin:0 0 22px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.chd{padding:8px 14px;font:500 14px Prompt,sans-serif;border-bottom:1px solid var(--line)}
+.clip svg{display:block;width:100%;max-height:380px}.cap{padding:10px 16px;min-height:4em;background:var(--accsoft);font-size:15.5px}
+.ctl{display:flex;align-items:center;gap:8px;padding:8px 12px;flex-wrap:wrap}.ctl button{border:1px solid var(--line);background:none;color:var(--ink);border-radius:6px;min-width:36px;height:32px;cursor:pointer;font:inherit}
+.sd{display:flex;gap:4px}.sd button{min-width:0;width:11px;height:11px;padding:0;border-radius:50%;background:var(--line)}.sd button.on{background:var(--acc)}
+.pg{flex:1;min-width:80px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}.pg i{display:block;height:100%;width:0;background:var(--acc)}
+.tm{font:12px ui-monospace,monospace;color:var(--mute)}.clip.pz svg *{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.clip svg *{animation-duration:.01s!important;animation-delay:0s!important}}
+
+.tr{display:flex;gap:10px;align-items:center}
+.snb{border:1px solid var(--line);background:none;color:var(--ink);border-radius:6px;padding:6px 12px;cursor:pointer;font:inherit;font-size:14px}.snb[aria-pressed=true]{background:var(--ok);color:#fff;border-color:var(--ok)}
+.nv{display:none;padding:6px 16px;font-size:13px;color:var(--mute);background:var(--bg)}body.nth .nv{display:block}
+.cap span{opacity:.45;transition:opacity .2s}.cap span.on{opacity:1}
+.scn{animation:scin .5s both}@keyframes scin{from{opacity:0;transform:translateX(30px)}}
+.fl circle{animation:fl 6s ease-in-out infinite alternate}.fl circle:nth-child(2){animation-duration:7s}.fl circle:nth-child(3){animation-duration:8s}@keyframes fl{to{transform:translate(8px,-10px)}}
+.mb{animation:bob 1.6s ease-in-out infinite}.bl,.mth,.arm{transform-box:fill-box;transform-origin:center}.bl{animation:blink 4s infinite}.arm{transform-origin:0% 100%}
+.clip.tk .mth{animation:talk .28s infinite alternate}.clip.tk .arm{animation:wave .7s ease-in-out infinite alternate}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}@keyframes talk{to{transform:scaleY(1.8)}}@keyframes wave{to{transform:rotate(-25deg)}}
+.cur{animation:cm 1.6s ease-in-out var(--d) both}@keyframes cm{from{transform:translate(var(--x1),var(--y1))}to{transform:translate(var(--x2),var(--y2))}}
+.rip{transform-box:fill-box;transform-origin:center;opacity:0;animation:rip .7s var(--d) forwards}@keyframes rip{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(7)}}
+@media(prefers-reduced-motion:reduce){.clip svg *{animation-iteration-count:1!important}}
+
+.vp{display:none;position:absolute;right:16px;top:100%;margin-top:6px;width:min(340px,92vw);padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.18);font-size:14px}.vp.open{display:block}
+.vp label{display:block;margin-bottom:10px}.vp select,.vp input{display:block;width:100%;margin-top:4px;padding:6px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}.vh{font-size:12.5px;color:var(--mute);margin:10px 0 0;line-height:1.6}
+@keyframes zb{to{transform:scale(2.2);filter:blur(2.5px)}}@keyframes sx{to{transform:scaleX(0)}}@keyframes wc{0%,100%{fill:#ff9a3c}50%{fill:#3c9aff}}@keyframes ls{to{letter-spacing:10px}}@keyframes rxa{to{rx:23px}}@keyframes kp{50%{transform:translateY(3px)}}
+.zb,.sx{transform-box:fill-box;transform-origin:center}.zb{animation:zb 4s 1s forwards}.sx{transform-origin:left;animation:sx 3s var(--d,0s) forwards}.wc{animation:wc 4s infinite}.lsp{animation:ls 3s 1s ease-in-out infinite alternate}.rxa{animation:rxa 3s .3s forwards}.kp{animation:kp .5s var(--d) 2}.ty{animation-delay:var(--d,0s)}
+
+.clip{position:relative;max-width:640px}
+.clip svg{aspect-ratio:16/9;height:auto;max-height:none}
+.chd{height:36px;line-height:20px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.cap{height:6.4em;overflow:hidden;font-size:14.5px;line-height:1.6;padding:10px 14px}
+.ctl{min-height:84px;align-content:flex-start}.pg{order:9;flex:1 0 100%}.tm{margin-left:auto}
+.nv{position:absolute;left:8px;right:8px;top:42px;z-index:2;padding:6px 10px;border-radius:6px;background:rgba(0,0,0,.75);color:#fff;font-size:12px;line-height:1.5}
+@media(min-width:1260px){
+.wrap{max-width:1480px;grid-template-columns:260px minmax(0,1fr)}
+.lesson{display:grid;grid-template-columns:minmax(0,1fr) 360px;column-gap:24px;align-items:start}
+.lesson>*{grid-column:1}
+.lesson>.clip{grid-column:2;grid-row:1/span 14;position:sticky;top:76px;margin:0;max-width:none}
+}
+@media(min-width:1260px) and (max-height:640px){.lesson>.clip{position:static}}
+.clip canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#eef1f8}
+</style>
+</head>
+<body>
+<svg id="hs" width="320" height="180" viewBox="0 0 320 180" aria-hidden="true" style="position:absolute;left:-9999px;top:0;visibility:hidden"></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="pix" viewBox="0 0 100 100"><rect x="14" y="24" width="72" height="66" rx="18" fill="#2d5bff"/><rect x="22" y="32" width="56" height="50" rx="12" fill="#fff"/><circle cx="40" cy="54" r="6" fill="#1b2233"/><circle cx="60" cy="54" r="6" fill="#1b2233"/><circle cx="42" cy="52" r="2" fill="#fff"/><circle cx="62" cy="52" r="2" fill="#fff"/><path d="M41 68q9 8 18 0" stroke="#1b2233" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="31" cy="66" r="4" fill="#ff9ec4" opacity=".7"/><circle cx="69" cy="66" r="4" fill="#ff9ec4" opacity=".7"/><path d="M26 26Q50 0 76 24Q52 16 26 26Z" fill="#ff6fb1"/><circle cx="51" cy="8" r="4" fill="#ff6fb1"/><path d="M88 74L98 44" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/><circle cx="99" cy="40" r="5" fill="#ffd21f"/></symbol>
+<pattern id="ck" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#fff"/><rect width="8" height="8" fill="#cfd3dc"/><rect x="8" y="8" width="8" height="8" fill="#cfd3dc"/></pattern>
+<g id="pp"><path d="M50 108Q80 58 110 108Z" fill="#2d5bff"/><circle cx="80" cy="46" r="16" fill="#f4c7a1"/><path d="M64 44Q80 22 96 44Q80 36 64 44Z" fill="#4a3426"/></g></defs></svg>
+<header class="top"><b class="brand">Photoshop 2026 · Course</b><div class="tr"><button id="gb" class="snb" aria-expanded="false" aria-label="voice settings">⚙</button><button id="sn" class="snb" aria-pressed="false"></button><div class="seg" role="group" aria-label="Language"><button id="lt" aria-pressed="true">ไทย</button><button id="le" aria-pressed="false">EN</button></div></div><div class="vp" id="vp"><label><span data-k="vl"></span><select id="vs"></select></label><label><span data-k="rl"></span> <b id="rv">0.95</b><input id="rt" type="range" min=".7" max="1.2" step=".05"></label><button id="vtest" class="btn" data-k="vt"></button><p class="vh" data-k="vh"></p></div></header>
+<div class="wrap">
+<aside aria-label="สารบัญบทเรียน">
+<header><span data-k="lay">Layers</span><span id="pct">0%</span></header>
+<div class="bar"><i id="fill"></i></div>
+<nav id="nav"></nav>
+</aside>
+
+<main>
+<div class="hero"><svg class="hm" viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><div>
+<h1 data-k="h1">เรียน Photoshop 2026 ตั้งแต่เริ่มต้น</h1>
+<p data-k="hp">8 บทเรียน จากการเปิดโปรแกรมครั้งแรก ไปจนถึงส่งออกงานจริง กดรูปดวงตาในแผงด้านข้างเมื่อเรียนจบแต่ละบท</p>
+</div></div>
+
+<section class="lesson" id="l1" data-t="รู้จักหน้าจอและเครื่องมือ"><div class="clip" data-i="0"></div><div class="th">
+<h2>บทที่ 1 รู้จักหน้าจอและเครื่องมือ</h2>
+<p class="goal">เป้าหมาย: เปิดไฟล์แล้วรู้ว่าอะไรอยู่ตรงไหน และเลื่อนซูมภาพได้คล่อง</p>
+<h3>ส่วนหลักของหน้าจอ</h3>
+<ul>
+<li><b>Options bar</b> แถบบนสุด เปลี่ยนตามเครื่องมือที่เลือก เช่น ขนาดและความแข็งของแปรง</li>
+<li><b>Toolbar</b> แถบซ้าย รวมเครื่องมือ ไอคอนที่มีสามเหลี่ยมเล็กมุมขวาล่างมีเครื่องมือซ่อนอยู่ ให้กดค้าง</li>
+<li><b>Canvas</b> พื้นที่ทำงานตรงกลาง</li>
+<li><b>Panels</b> แผงด้านขวา ที่ใช้บ่อยคือ Layers, Properties, Adjustments, History</li>
+<li><b>Contextual Task Bar</b> แถบลอยใต้ภาพ แสดงปุ่มลัดตามสิ่งที่ทำอยู่ เช่น พอเลือกวัตถุจะมีปุ่ม Generative Fill ขึ้นมา</li>
+</ul>
+<p>ถ้าแผงหาย ไปที่เมนู <b>Window</b> แล้วติ๊กชื่อแผง หากหน้าจอเละให้เลือก <b>Window › Workspace › Reset Essentials</b></p>
+<h3>เครื่องมือที่ต้องรู้ก่อน</h3>
+<div class="tools">
+<div><b>Move (V)</b>ย้ายเลเยอร์</div>
+<div><b>Marquee (M)</b>เลือกพื้นที่สี่เหลี่ยม/วงรี</div>
+<div><b>Object Selection (W)</b>ลากคร่อมวัตถุ แล้วโปรแกรมเลือกให้</div>
+<div><b>Crop (C)</b>ตัดภาพและจัดองค์ประกอบ</div>
+<div><b>Brush (B)</b>วาดและลงสี</div>
+<div><b>Type (T)</b>พิมพ์ข้อความ</div>
+</div>
+<h3>เลื่อนและซูม</h3>
+<p>กด <kbd>Space</kbd> ค้างแล้วลากเพื่อเลื่อนภาพ ใช้ <kbd>Alt</kbd> + ลูกกลิ้งเมาส์เพื่อซูม <kbd>Ctrl 0</kbd> พอดีหน้าจอ <kbd>Ctrl 1</kbd> ขนาด 100%</p>
+<div class="try"><b>ลองทำ:</b> เปิดรูปใดก็ได้ ซูมเข้าไปที่ดวงตา กลับมาพอดีจอ แล้วกด <kbd>Ctrl Z</kbd> เพื่อย้อนการกระทำ</div>
+</div><div class="en"><h2>Lesson 1 · Know the screen and tools</h2><p class="goal">Goal: open a file, know where things are, and pan and zoom with ease.</p><ul><li><b>Options bar</b> (top) changes with the active tool.</li><li><b>Toolbar</b> (left): icons with a small triangle hide more tools; press and hold.</li><li><b>Panels</b> (right): Layers, Properties, Adjustments, History.</li><li><b>Contextual Task Bar</b> floats under the image and offers the next likely action, such as Generative Fill.</li></ul><p>Lost a panel? Open <b>Window</b> and tick its name, or choose <b>Window › Workspace › Reset Essentials</b>.</p><div class="tools"><div><b>Move (V)</b>Move layers</div><div><b>Marquee (M)</b>Rectangle or ellipse selection</div><div><b>Object Selection (W)</b>Drag over an object to select it</div><div><b>Crop (C)</b>Trim and recompose</div><div><b>Brush (B)</b>Paint</div><div><b>Type (T)</b>Add text</div></div><p>Hold <kbd>Space</kbd> and drag to pan, <kbd>Alt</kbd> + scroll to zoom, <kbd>Ctrl 0</kbd> to fit the screen, <kbd>Ctrl 1</kbd> for 100%.</p><div class="try"><b>Try it:</b> open any photo, zoom into an eye, fit to screen, then undo with <kbd>Ctrl Z</kbd>.</div></div><h3 data-k="mt"></h3><p class="goal" data-k="mn"></p>
+<div class="uiw"><div class="ps" id="ps">
+<button class="hs m" data-h="menu">File &nbsp;Edit &nbsp;Image &nbsp;Layer &nbsp;Type &nbsp;Select &nbsp;Filter &nbsp;View &nbsp;<u>Window</u> &nbsp;Help</button>
+<button class="hs o" data-h="opts">Brush ▾ &nbsp; Size 40 px &nbsp; Opacity 100%</button>
+<div class="tl"><button class="hs tb" data-h="v">V</button><button class="hs tb" data-h="m">M</button><button class="hs tb" data-h="l">L</button><button class="hs tb" data-h="w">W</button><button class="hs tb" data-h="c">C</button><button class="hs tb" data-h="j">J</button><button class="hs tb" data-h="b">B</button><button class="hs tb" data-h="s">S</button><button class="hs tb" data-h="e">E</button><button class="hs tb" data-h="t">T</button><button class="hs tb" data-h="u">U</button></div>
+<div class="cv"><button class="hs cvb" data-h="canvas"><svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9a62"/><stop offset="1" stop-color="#ffe3a3"/></linearGradient></defs><rect width="300" height="200" fill="url(#sk)"/><circle cx="210" cy="70" r="26" fill="#fff3c4"/><path d="M0 200V140L70 90L130 150L190 110L300 170V200Z" fill="#3b4a8c"/></svg></button><button class="hs tk" data-h="task">✦ Generative Fill</button></div>
+<div class="pn"><button class="hs pr" data-h="props"><b>Properties</b><br>Mask · Density · Feather</button>
+<div class="ly"><b>Layers</b><button class="hs bl" data-h="blend">Normal ▾ &nbsp; Opacity 100%</button>
+<button class="hs lr" data-h="layers">◉ T &nbsp;Hello</button><button class="hs lr" data-h="layers">◉ ◐ &nbsp;Curves 1</button><button class="hs lr" data-h="layers">◉ ▣ &nbsp;Photo</button>
+<div class="lb"><span>fx</span><button class="hs" data-h="mask" aria-label="mask">◨</button><button class="hs" data-h="adj" aria-label="adjustment">◐</button><button class="hs" data-h="newl" aria-label="new layer">＋</button></div></div></div>
+</div></div>
+<div class="info" id="info" role="status"><b></b><span></span></div><div class="mas"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><p class="th">ซูมเข้าซูมออกบ่อยๆ แล้วจะคล่องเอง!</p><p class="en">Zoom in and out often. You will get fast!</p></div></section>
+
+<section class="lesson" id="l2" data-t="สร้างไฟล์ ขนาด ความละเอียด"><div class="clip" data-i="1"></div><div class="th">
+<h2>บทที่ 2 สร้างไฟล์ ขนาด และความละเอียด</h2>
+<p class="goal">เป้าหมาย: ตั้งค่าเอกสารให้ตรงกับงานตั้งแต่แรก จะได้ไม่ต้องแก้ทีหลัง</p>
+<ol>
+<li>กด <kbd>Ctrl N</kbd> เลือกหมวด Web, Print หรือ Photo ตามงาน</li>
+<li>ตั้งขนาดด้านขวา เช่น โพสต์ Instagram 1080 × 1350 px</li>
+<li>ตั้ง Resolution: งานหน้าจอใช้ 72 ppi งานพิมพ์ใช้ 300 ppi</li>
+<li>เลือก Color Mode: งานจอใช้ <b>RGB</b> งานพิมพ์โรงพิมพ์มักใช้ <b>CMYK</b> (ถามโรงพิมพ์ก่อน)</li>
+</ol>
+<h3>เปลี่ยนขนาดภาพที่มีอยู่</h3>
+<p>ไปที่ <b>Image › Image Size</b> ติ๊ก Resample ถ้าจะเปลี่ยนจำนวนพิกเซล ส่วน <b>Canvas Size</b> ใช้ขยายหรือลดพื้นที่ผ้าใบโดยไม่ยืดภาพ</p>
+<div class="tip">การย่อภาพไม่เสียคุณภาพมาก แต่การขยายภาพเล็กให้ใหญ่จะเบลอ ถ้าจำเป็นต้องขยาย ลองเลือก Resample เป็น Preserve Details</div>
+<h3>ใช้ Smart Object กันภาพเสีย</h3>
+<p>คลิกขวาที่เลเยอร์ เลือก <b>Convert to Smart Object</b> เมื่อย่อแล้วขยายกลับ ภาพจะไม่เสียรายละเอียด และฟิลเตอร์ที่ใส่ยังแก้ไขภายหลังได้</p>
+</div><div class="en"><h2>Lesson 2 · New files, size and resolution</h2><p class="goal">Goal: set up the document correctly from the start.</p><ol><li>Press <kbd>Ctrl N</kbd> and pick Web, Print or Photo.</li><li>Set the size, e.g. 1080 × 1350 px for an Instagram post.</li><li>Resolution: 72 ppi for screens, 300 ppi for print.</li><li>Color mode: <b>RGB</b> for screens; <b>CMYK</b> is often used for print (ask your printer).</li></ol><p><b>Image › Image Size</b> changes pixel count (tick Resample). <b>Canvas Size</b> enlarges the canvas without stretching the image.</p><div class="tip">Shrinking loses little quality; enlarging a small image makes it soft. If you must, try Resample: Preserve Details.</div><p>Right-click a layer › <b>Convert to Smart Object</b> so you can resize repeatedly without damage and keep filters editable.</p></div><div class="mas"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><p class="th">ตั้งขนาดให้ถูกตั้งแต่แรก ชีวิตง่ายขึ้นเยอะ</p><p class="en">Set the right size first and life gets easier.</p></div></section>
+
+<section class="lesson" id="l3" data-t="เลเยอร์ (Layers)"><div class="clip" data-i="2"></div><div class="th">
+<h2>บทที่ 3 เลเยอร์ (Layers)</h2>
+<p class="goal">เป้าหมาย: ทำงานแบบแยกชั้น แก้ไขได้ทุกเมื่อโดยไม่ทำลายต้นฉบับ</p>
+<p>เลเยอร์เหมือนแผ่นใสวางซ้อนกัน ตัวที่อยู่บนบังตัวที่อยู่ล่าง ดูได้ที่แผง Layers</p>
+<ul>
+<li><kbd>Ctrl Shift N</kbd> สร้างเลเยอร์ว่าง</li>
+<li><kbd>Ctrl J</kbd> ทำสำเนาเลเยอร์ หรือคัดลอกส่วนที่เลือกขึ้นเลเยอร์ใหม่</li>
+<li>รูปดวงตา ซ่อน/แสดงเลเยอร์ กดล็อกเพื่อกันแก้โดยไม่ตั้งใจ</li>
+<li>ลากเลเยอร์ขึ้นลงเพื่อสลับลำดับ กด <kbd>Ctrl G</kbd> จัดกลุ่ม</li>
+<li><b>Opacity</b> ปรับความโปร่งใส <b>Blend Mode</b> ปรับวิธีผสมสี เช่น Multiply ทำให้เข้มลง Screen ทำให้สว่างขึ้น</li>
+</ul>
+<h3>Free Transform</h3>
+<p>กด <kbd>Ctrl T</kbd> จะมีกรอบรอบเลเยอร์ ลากมุมพร้อมกด <kbd>Shift</kbd> เพื่อย่อขยายตามสัดส่วน หมุนโดยลากนอกมุม กด <kbd>Enter</kbd> เพื่อยืนยัน</p>
+<div class="tip">ตั้งชื่อเลเยอร์ทุกครั้งที่งานเริ่มเกิน 5 เลเยอร์ ดับเบิลคลิกที่ชื่อเพื่อแก้ งานที่ส่งต่อให้คนอื่นจะอ่านง่ายขึ้นมาก</div>
+<div class="try"><b>ลองทำ:</b> เปิดรูป กด <kbd>Ctrl J</kbd> ตั้งเลเยอร์ที่ซ้ำเป็น Multiply ลด Opacity เหลือ 40% แล้วดูว่าภาพเปลี่ยนอย่างไร</div>
+</div><div class="en"><h2>Lesson 3 · Layers</h2><p class="goal">Goal: work in stacked layers you can edit at any time.</p><p>Layers are like transparent sheets stacked on top of each other. Manage them in the Layers panel.</p><ul><li><kbd>Ctrl Shift N</kbd> new layer; <kbd>Ctrl J</kbd> duplicate layer or lift a selection onto its own layer.</li><li>The eye icon shows or hides; the lock prevents accidents; <kbd>Ctrl G</kbd> groups layers.</li><li><b>Opacity</b> sets transparency; <b>Blend Mode</b> sets how colors mix (Multiply darkens, Screen lightens).</li><li><kbd>Ctrl T</kbd> Free Transform: hold <kbd>Shift</kbd> to keep proportions, press <kbd>Enter</kbd> to confirm.</li></ul><div class="tip">Name your layers once a file passes about five layers. Double-click the name to rename.</div><div class="try"><b>Try it:</b> duplicate a photo layer, set it to Multiply at 40% opacity, and compare.</div></div><figure class="fg"><svg viewBox="0 0 220 130" aria-hidden="true"><g transform="skewX(-20) translate(40 0)"><rect x="30" y="70" width="110" height="50" rx="6" fill="#8fd3a8"/><rect x="45" y="48" width="110" height="50" rx="6" fill="#2d5bff" opacity=".92"/><rect x="60" y="26" width="110" height="50" rx="6" fill="#ffd21f" opacity=".92"/></g><use href="#pix" x="150" y="60" width="60" height="60"/></svg><figcaption><span class="th">เลเยอร์ซ้อนกันเหมือนแผ่นใส ตัวบนบังตัวล่าง</span><span class="en">Layers stack like clear sheets: top hides bottom.</span></figcaption></figure><div class="mas"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><p class="th">ตั้งชื่อเลเยอร์ไว้ คนอื่นก็อ่านงานเราออก</p><p class="en">Name your layers so others can read your file.</p></div></section>
+
+<section class="lesson" id="l4" data-t="เลือกพื้นที่และมาสก์"><div class="clip" data-i="3"></div><div class="th">
+<h2>บทที่ 4 เลือกพื้นที่และเลเยอร์มาสก์</h2>
+<p class="goal">เป้าหมาย: ตัดพื้นหลังออกโดยยังย้อนกลับได้</p>
+<h3>วิธีเลือก</h3>
+<ul>
+<li><b>Object Selection (W):</b> ลากกรอบคร่อมวัตถุ เหมาะกับคน สัตว์ สิ่งของ</li>
+<li><b>Select Subject:</b> ปุ่มใน Options bar เลือกตัวแบบหลักอัตโนมัติ</li>
+<li><b>Lasso (L):</b> ลากเส้นรอบเอง ใช้เก็บรายละเอียด</li>
+<li>กด <kbd>Shift</kbd> เพื่อเพิ่มพื้นที่ กด <kbd>Alt</kbd> เพื่อลบพื้นที่</li>
+</ul>
+<h3>ตัดพื้นหลังด้วยมาสก์</h3>
+<ol>
+<li>เลือกวัตถุด้วย Select Subject</li>
+<li>กดปุ่ม <b>Add Layer Mask</b> (ไอคอนสี่เหลี่ยมมีวงกลม) ที่ท้ายแผง Layers</li>
+<li>พื้นหลังจะถูกซ่อน ไม่ได้ถูกลบ</li>
+<li>เลือกช่องมาสก์ ใช้แปรง <b>ดำ</b> ซ่อนเพิ่ม <b>ขาว</b> เอากลับมา กด <kbd>X</kbd> สลับสี</li>
+</ol>
+<p>ขอบหยาบ ให้ดับเบิลคลิกมาสก์เพื่อเปิด Properties แล้วใช้ <b>Feather</b> หรือเลือก <b>Select and Mask</b> เพื่อปรับขอบผมให้เนียน</p>
+<div class="tip">จำง่ายๆ “ดำซ่อน ขาวโชว์” ผิดเมื่อไรก็สลับสีแล้วระบายใหม่ได้ ต่างจากยางลบที่ลบแล้วหายถาวร</div>
+</div><div class="en"><h2>Lesson 4 · Selections and layer masks</h2><p class="goal">Goal: remove a background without destroying anything.</p><ul><li><b>Object Selection (W)</b>: drag a box around a person, animal or item.</li><li><b>Select Subject</b>: one click in the Options bar.</li><li><b>Lasso (L)</b>: draw by hand for fine details. <kbd>Shift</kbd> adds, <kbd>Alt</kbd> subtracts.</li></ul><ol><li>Select the subject.</li><li>Click <b>Add Layer Mask</b> at the bottom of the Layers panel.</li><li>The background is hidden, not deleted.</li><li>Paint on the mask: <b>black hides</b>, <b>white reveals</b>; press <kbd>X</kbd> to swap.</li></ol><p>For rough edges, use Feather in Properties or <b>Select and Mask</b> to refine hair.</p></div><div class="comic"><figure><svg viewBox="0 0 160 110" aria-hidden="true"><rect width="160" height="110" fill="#8fd3a8"/><use href="#pp"/><path d="M48 109Q80 56 112 109ZM64 46a16 16 0 1 0 32 0a16 16 0 1 0-32 0" fill="none" stroke="#1b2233" stroke-width="2" stroke-dasharray="5 3"/><use href="#pix" x="118" y="6" width="36" height="36"/></svg><figcaption><span class="th">① เลือกวัตถุด้วย Select Subject</span><span class="en">① Select the subject.</span></figcaption></figure>
+<figure><svg viewBox="0 0 160 110" aria-hidden="true"><rect width="160" height="110" fill="url(#ck)"/><use href="#pp"/><use href="#pix" x="118" y="6" width="36" height="36"/></svg><figcaption><span class="th">② กด Add Layer Mask พื้นหลังถูกซ่อน ไม่ได้ถูกลบ</span><span class="en">② Click Add Layer Mask. The background is hidden, not deleted.</span></figcaption></figure>
+<figure><svg viewBox="0 0 160 110" aria-hidden="true"><rect width="160" height="110" fill="#e9ecf4"/><circle cx="45" cy="60" r="26" fill="#111"/><path d="M30 76L60 44" stroke="#fff" stroke-width="4"/><circle cx="115" cy="60" r="26" fill="#fff" stroke="#1b2233" stroke-width="2"/><ellipse cx="115" cy="60" rx="16" ry="9" fill="none" stroke="#1b2233" stroke-width="3"/><circle cx="115" cy="60" r="4" fill="#1b2233"/><use href="#pix" x="62" y="2" width="36" height="36"/></svg><figcaption><span class="th">③ แปรงดำซ่อนเพิ่ม แปรงขาวเอากลับมา</span><span class="en">③ Black brush hides more; white brings it back.</span></figcaption></figure></div><div class="mas"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><p class="th">จำไว้นะ ดำซ่อน ขาวโชว์!</p><p class="en">Remember: black hides, white reveals!</p></div></section>
+
+<section class="lesson" id="l5" data-t="ปรับสีและแสง"><div class="clip" data-i="4"></div><div class="th">
+<h2>บทที่ 5 ปรับสีและแสง</h2>
+<p class="goal">เป้าหมาย: แก้ภาพมืด ซีด สีเพี้ยน แบบที่แก้ภายหลังได้</p>
+<p>ใช้ <b>Adjustment Layer</b> จากแผง Adjustments หรือปุ่มวงกลมครึ่งดำครึ่งขาวท้ายแผง Layers แทนการไปที่ Image › Adjustments โดยตรง เพราะแยกชั้นและมีมาสก์ในตัว</p>
+<div class="tools">
+<div><b>Levels / Curves</b>ปรับความสว่าง คอนทราสต์ Curves ละเอียดกว่า</div>
+<div><b>Vibrance</b>เพิ่มสีสันโดยไม่ทำสีผิวเพี้ยน</div>
+<div><b>Hue/Saturation</b>เปลี่ยนเฉดและความสดแยกตามช่วงสี</div>
+<div><b>Color Balance</b>เติมโทนอุ่นหรือเย็น</div>
+<div><b>Camera Raw Filter</b>ปรับภาพแบบเดียวกับ Lightroom</div>
+</div>
+<h3>ลำดับที่แนะนำ</h3>
+<ol>
+<li>ปรับแสงโดยรวมด้วย Levels ดึงแถบเล็กด้านขาวและดำเข้าหาขอบกราฟ</li>
+<li>ปรับคอนทราสต์ด้วย Curves ดึงเป็นรูปตัว S อ่อนๆ</li>
+<li>แก้สีผิดด้วย Color Balance หรือ Hue/Saturation</li>
+<li>เพิ่มความสดด้วย Vibrance</li>
+</ol>
+<div class="tip">ถ้าอยากให้เอฟเฟกต์กระทบแค่เลเยอร์ล่างตัวเดียว คลิกขวาที่ Adjustment Layer แล้วเลือก Create Clipping Mask</div>
+</div><div class="en"><h2>Lesson 5 · Color and light</h2><p class="goal">Goal: fix dark, flat or off-color photos non-destructively.</p><p>Use <b>Adjustment Layers</b> (Adjustments panel or the half-black circle in Layers) instead of Image › Adjustments: they sit on their own layer and include a mask.</p><ul><li><b>Levels / Curves</b>: brightness and contrast; Curves is finer.</li><li><b>Vibrance</b>: more color without wrecking skin tones.</li><li><b>Hue/Saturation</b> and <b>Color Balance</b>: fix or warm and cool the color.</li><li><b>Camera Raw Filter</b>: Lightroom-style controls.</li></ul><p>Suggested order: Levels › Curves (gentle S) › color fixes › Vibrance.</p><div class="tip">To affect only the layer below, right-click the adjustment and choose Create Clipping Mask.</div></div><div class="mas"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><p class="th">ใช้ Adjustment Layer ไว้ก่อน ไม่มีเสียใจทีหลัง</p><p class="en">Use Adjustment Layers and skip the regrets.</p></div></section>
+
+<section class="lesson" id="l6" data-t="รีทัชและลบสิ่งไม่ต้องการ"><div class="clip" data-i="5"></div><div class="th">
+<h2>บทที่ 6 รีทัชและลบสิ่งที่ไม่ต้องการ</h2>
+<p class="goal">เป้าหมาย: ลบสิว รอยเปื้อน หรือคนที่เดินเข้ามาในภาพ</p>
+<ul>
+<li><b>Remove Tool:</b> ระบายทับสิ่งที่ต้องการลบแล้วปล่อยเมาส์ โปรแกรมเติมพื้นหลังให้ เหมาะกับวัตถุเล็กถึงกลาง</li>
+<li><b>Spot Healing Brush:</b> แตะที่สิวหรือฝุ่นจุดเดียวก็หาย</li>
+<li><b>Clone Stamp (S):</b> กด <kbd>Alt</kbd> คลิกเลือกต้นทาง แล้วระบายทับตำแหน่งที่ต้องการ ควบคุมได้เต็มที่</li>
+<li><b>Content-Aware Fill:</b> เลือกพื้นที่ แล้ว Edit › Content-Aware Fill</li>
+</ul>
+<div class="tip">ทำรีทัชบน <b>เลเยอร์ว่างใหม่</b> และในตัวเครื่องมือเลือก Sample: Current &amp; Below (หรือ All Layers) ถ้าไม่พอใจก็ลบเลเยอร์นั้นทิ้ง ต้นฉบับยังอยู่ครบ</div>
+<p>ผิวหน้า ห้ามลบริ้วรอยจนเรียบเป็นพลาสติก ลดความแรงด้วย Opacity ของเลเยอร์รีทัชเหลือ 50–70% จะดูเป็นธรรมชาติกว่า</p>
+</div><div class="en"><h2>Lesson 6 · Retouching and removing things</h2><p class="goal">Goal: remove blemishes, dust or people who walked into the shot.</p><ul><li><b>Remove Tool</b>: paint over the unwanted item and release; the background is filled in.</li><li><b>Spot Healing Brush</b>: tap a pimple or dust speck.</li><li><b>Clone Stamp (S)</b>: <kbd>Alt</kbd>+click a source, then paint where needed.</li><li><b>Content-Aware Fill</b>: select an area, then Edit › Content-Aware Fill.</li></ul><div class="tip">Retouch on a <b>new empty layer</b> with Sample: Current &amp; Below (or All Layers). Unhappy? Delete that layer and the original is untouched.</div><p>Do not smooth skin until it looks like plastic; lower the retouch layer to 50–70% opacity.</p></div><div class="mas"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><p class="th">รีทัชบนเลเยอร์ใหม่ ปลอดภัยสุดๆ</p><p class="en">Retouch on a new layer. Safe and sound.</p></div></section>
+
+<section class="lesson" id="l7" data-t="ข้อความและรูปทรง"><div class="clip" data-i="6"></div><div class="th">
+<h2>บทที่ 7 ข้อความและรูปทรง</h2>
+<p class="goal">เป้าหมาย: ทำโปสเตอร์หรือแบนเนอร์ที่อ่านง่าย</p>
+<ol>
+<li>กด <kbd>T</kbd> คลิกบนภาพแล้วพิมพ์ กด <kbd>Ctrl Enter</kbd> เพื่อยืนยัน</li>
+<li>เปลี่ยนฟอนต์ ขนาด สี ที่ Options bar หรือแผง Properties</li>
+<li>ลากเมาส์เป็นกล่องเพื่อสร้าง <b>Paragraph Text</b> ที่ตัดบรรทัดอัตโนมัติ</li>
+<li>ปรับ Tracking (ระยะตัวอักษร) และ Leading (ระยะบรรทัด) ที่แผง Character</li>
+</ol>
+<h3>หลักจัดตัวอักษรให้อ่านง่าย</h3>
+<ul>
+<li>ใช้ฟอนต์ไม่เกิน 2 แบบ แยกหัวข้อกับเนื้อหาด้วยขนาดและน้ำหนัก</li>
+<li>ข้อความไทยควรเว้นบรรทัดประมาณ 1.4–1.6 เท่าของขนาดตัวอักษร เพราะสระและวรรณยุกต์ซ้อนสูง</li>
+<li>ถ้าข้อความอยู่บนรูปแล้วอ่านยาก ใส่แผ่นสีโปร่งแสงคั่นกลาง หรือใช้เงา (Drop Shadow) เบาๆ</li>
+</ul>
+<h3>รูปทรง</h3>
+<p>ใช้ Rectangle Tool (<kbd>U</kbd>) วาดกรอบหรือปุ่ม รูปทรงเป็นเวกเตอร์ ย่อขยายไม่แตก ปรับมุมโค้งได้ที่แผง Properties</p>
+</div><div class="en"><h2>Lesson 7 · Text and shapes</h2><p class="goal">Goal: build a poster or banner that reads clearly.</p><ol><li>Press <kbd>T</kbd>, click the image and type; <kbd>Ctrl Enter</kbd> confirms.</li><li>Change font, size and color in the Options bar or Properties.</li><li>Drag a box for <b>Paragraph Text</b> that wraps automatically.</li><li>Adjust tracking and leading in the Character panel.</li></ol><ul><li>Use at most two fonts; separate headings from body by size and weight.</li><li>Keep line spacing around 1.4–1.6× for Thai text with stacked vowels and tone marks.</li><li>If text is hard to read on a photo, add a translucent panel or a soft Drop Shadow.</li></ul><p>Shapes (<kbd>U</kbd>) are vectors: scale freely, adjust corner radius in Properties.</p></div><div class="mas"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><p class="th">ฟอนต์ไม่เกินสองแบบ งานจะดูสะอาดตา</p><p class="en">Two fonts at most keeps things clean.</p></div></section>
+
+<section class="lesson" id="l8" data-t="Generative AI และการส่งออก"><div class="clip" data-i="7"></div><div class="th">
+<h2>บทที่ 8 Generative AI และส่งออกงาน</h2>
+<p class="goal">เป้าหมาย: ใช้ AI ช่วยเติมภาพ และบันทึกไฟล์ให้ถูกชนิด</p>
+<h3>Generative Fill และ Generative Expand</h3>
+<ol>
+<li>เลือกพื้นที่ด้วย Lasso หรือ Object Selection</li>
+<li>กด <b>Generative Fill</b> บน Contextual Task Bar</li>
+<li>พิมพ์สิ่งที่ต้องการ เช่น “ท้องฟ้ายามเย็น” ปล่อยว่างไว้ถ้าต้องการให้ลบวัตถุ</li>
+<li>เลือกผลลัพธ์ที่ชอบจากแผง Properties ผลลัพธ์จะเป็นเลเยอร์แยก</li>
+</ol>
+<p><b>Generative Expand:</b> ใช้ Crop Tool ลากกรอบให้ใหญ่กว่าภาพ แล้วกด Generate เพื่อขยายฉากต่อออกไป</p>
+<div class="tip">ฟีเจอร์เหล่านี้ต้องล็อกอิน Adobe และใช้เครดิต Generative ตามแพ็กเกจที่สมัคร รายละเอียดของรุ่นและโมเดลที่ใช้ได้เปลี่ยนตามอัปเดต ให้ดูหน้า Help ในโปรแกรมประกอบ ภาพจาก AI ควรตรวจมือ ตัวอักษร และรายละเอียดเล็กๆ ก่อนใช้งานจริงเสมอ</div>
+<h3>ส่งออกไฟล์</h3>
+<div class="tw"><table>
+<tr><th>ต้องการ</th><th>ใช้</th><th>เมนู</th></tr>
+<tr><td>ส่งต่อไฟล์ที่ยังแก้ได้</td><td>PSD</td><td>File › Save As</td></tr>
+<tr><td>ภาพถ่ายขึ้นเว็บ/โซเชียล</td><td>JPG</td><td>File › Export › Export As</td></tr>
+<tr><td>โลโก้ พื้นหลังโปร่งใส</td><td>PNG</td><td>Export As</td></tr>
+<tr><td>ภาพขนาดเล็กโหลดเร็ว</td><td>WebP</td><td>Export As</td></tr>
+<tr><td>ส่งโรงพิมพ์</td><td>PDF หรือ TIFF</td><td>File › Save As</td></tr>
+</table></div>
+<div class="try"><b>โปรเจกต์จบหลักสูตร:</b> ทำโปสเตอร์ขนาด 1080 × 1350 px ตัดวัตถุเป็นมาสก์ ปรับสีด้วย Adjustment Layer ใส่ข้อความ 2 ระดับ เซฟ PSD เก็บไว้และส่งออก JPG</div>
+</div><div class="en"><h2>Lesson 8 · Generative AI and exporting</h2><p class="goal">Goal: use AI to fill in an image and save the right file type.</p><ol><li>Select an area with Lasso or Object Selection.</li><li>Click <b>Generative Fill</b> on the Contextual Task Bar.</li><li>Type what you want, e.g. “evening sky”; leave it blank to remove an object.</li><li>Pick a result in Properties; each one is a separate layer.</li></ol><p><b>Generative Expand:</b> drag the Crop tool beyond the image and click Generate.</p><div class="tip">These features need an Adobe sign-in and use generative credits depending on your plan. Available models vary by update, so check in-app Help. Always inspect AI results for hands, text and small details.</div><p><b>Export:</b> PSD to keep editing (File › Save As); JPG for photos, PNG for transparency, WebP for small web images (File › Export › Export As); PDF or TIFF for print.</p><div class="try"><b>Final project:</b> a 1080 × 1350 px poster with a masked subject, adjustment layers and two levels of text. Save a PSD and export a JPG.</div></div><div class="mas"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pix"/></svg><p class="th">AI ช่วยได้ แต่ต้องตรวจงานด้วยตาตัวเองด้วย</p><p class="en">AI helps, but check the result with your own eyes.</p></div></section>
+
+<section id="quiz"><h2 data-k="qt">แบบทดสอบหลังเรียน</h2><p class="goal" data-k="qd"></p><div id="qz"></div><div class="qbar"><button id="chk" class="btn" data-k="chk"></button><button id="rst" class="btn ghost" data-k="rst"></button></div><div id="res" role="status"></div></section>
+<section id="keys">
+<h2 data-k="keys">คีย์ลัด</h2>
+<div class="bar2">
+<input id="q" type="search" placeholder="ค้นหา เช่น ย้อน หรือ layer" aria-label="ค้นหาคีย์ลัด">
+</div>
+<div class="tw"><table><thead><tr><th data-k="c1">การทำงาน</th><th data-k="c2">คีย์</th></tr></thead><tbody id="kb"></tbody></table></div>
+</section>
+<footer data-k="foot">เนื้อหาเป็นพื้นฐานที่ใช้ได้กับ Photoshop หลายรุ่น หน้าตาปุ่มบางจุดอาจต่างกันเล็กน้อยตามเวอร์ชันที่ติดตั้ง</footer>
+</main>
+</div>
+
+<script>
+var L=/^en/i.test(navigator.language||"")?"en":"th";try{var sv=localStorage.getItem("ps-lang");if(sv)L=sv}catch(e){}
+var T={th:{h1:"เรียน Photoshop 2026 ตั้งแต่เริ่มต้น",hp:"8 บทเรียน จากการเปิดโปรแกรมครั้งแรก ไปจนถึงส่งออกงานจริง กดรูปดวงตาในแผงด้านข้างเมื่อเรียนจบแต่ละบท",lay:"Layers · บทเรียน",keys:"คีย์ลัดที่ใช้บ่อย (Windows)",c1:"การทำงาน",c2:"คีย์",ph:"ค้นหา เช่น ย้อน หรือ layer",nf:"ไม่พบคีย์ลัดที่ค้นหา ลองคำอื่น",qt:"แบบทดสอบหลังเรียน",qd:"8 ข้อ ข้อละ 1 คะแนน ตอบให้ครบแล้วกดตรวจคำตอบ",chk:"ตรวจคำตอบ",rst:"ทำใหม่",foot:"เนื้อหาเป็นพื้นฐานที่ใช้ได้กับ Photoshop หลายรุ่น หน้าตาปุ่มบางจุดอาจต่างกันเล็กน้อยตามเวอร์ชันที่ติดตั้ง",t:"เรียน Photoshop 2026 ตั้งแต่เริ่มต้น",a:"ตอบยังไม่ครบ เหลืออีก ",s:"คะแนนของคุณ ",g:"ยอดเยี่ยม พร้อมลงมือทำงานจริง",m:"ดีแล้ว ลองกลับไปทบทวนข้อที่พลาด",b:"ลองอ่านบทเรียนอีกรอบ แล้วทำใหม่ได้เลย",quiz:"แบบทดสอบ",keysn:"คีย์ลัด"},en:{h1:"Learn Photoshop 2026 from scratch",hp:"8 lessons from your first launch to exporting real work. Click the eye in the side panel when you finish a lesson.",lay:"Layers · Lessons",keys:"Essential shortcuts (Windows)",c1:"Action",c2:"Keys",ph:"Search, e.g. undo or layer",nf:"No shortcut found. Try another word.",qt:"Post-course quiz",qd:"8 questions, 1 point each. Answer all, then check.",chk:"Check answers",rst:"Try again",foot:"This covers fundamentals that work across many Photoshop versions. Some buttons may look slightly different in your installed version.",t:"Learn Photoshop 2026 from scratch",a:"Not finished. Unanswered: ",s:"Your score: ",g:"Excellent, you are ready for real projects.",m:"Good. Review the ones you missed.",b:"Reread the lessons, then try again.",quiz:"Quiz",keysn:"Shortcuts"}};
+var TE=["Know the screen and tools","New files, size, resolution","Layers","Selections and masks","Color and light","Retouching","Text and shapes","Generative AI and export"];
+var K=[["ย้อนกลับ","Undo","Ctrl+Z"],["ย้อนหลายขั้น","Step backward","Ctrl+Alt+Z"],["ทำสำเนาเลเยอร์","Duplicate layer","Ctrl+J"],["สร้างเลเยอร์ใหม่","New layer","Ctrl+Shift+N"],["Free Transform","Free Transform","Ctrl+T"],["ยกเลิกการเลือก","Deselect","Ctrl+D"],["กลับด้านพื้นที่เลือก","Invert selection","Ctrl+Shift+I"],["จัดกลุ่มเลเยอร์","Group layers","Ctrl+G"],["รวมเลเยอร์ลงล่าง","Merge down","Ctrl+E"],["รวมทุกเลเยอร์เป็นเลเยอร์ใหม่","Stamp visible layers","Ctrl+Alt+Shift+E"],["พอดีหน้าจอ","Fit on screen","Ctrl+0"],["ซูม 100%","Zoom 100%","Ctrl+1"],["เลื่อนภาพ","Pan","Space + drag"],["ขนาดแปรง เล็ก/ใหญ่","Brush size down/up","[ and ]"],["สลับสีหน้า/หลัง","Swap colors","X"],["สีมาตรฐานดำ/ขาว","Default colors","D"],["ส่งออก Export As","Export As","Ctrl+Alt+Shift+W"],["บันทึก","Save","Ctrl+S"]];
+var Q=[[1,"ถ้าแผงหายไป ควรทำอย่างไร?",["ปิดแล้วเปิดโปรแกรมใหม่","เมนู Window แล้วติ๊กชื่อแผง","Edit › Preferences"],"เมนู Window เป็นที่รวมแผงทั้งหมด","A panel went missing. What do you do?",["Restart the app","Window menu, tick the panel name","Edit › Preferences"],"The Window menu lists every panel."],
+[2,"งานพิมพ์ควรตั้ง Resolution เท่าไร?",["72 ppi","10 ppi","300 ppi"],"งานพิมพ์ใช้ 300 ppi ส่วนงานจอใช้ 72 ppi","What resolution suits print work?",["72 ppi","10 ppi","300 ppi"],"Print uses 300 ppi; screens use 72 ppi."],
+[0,"คีย์ลัดทำสำเนาเลเยอร์คือข้อใด?",["Ctrl+J","Ctrl+T","Ctrl+D"],"Ctrl+T คือ Free Transform และ Ctrl+D คือยกเลิกการเลือก","Which shortcut duplicates a layer?",["Ctrl+J","Ctrl+T","Ctrl+D"],"Ctrl+T is Free Transform; Ctrl+D deselects."],
+[1,"บนเลเยอร์มาสก์ สีใดที่ซ่อนภาพ?",["ขาว","ดำ","ไม่มีสีใดซ่อนได้"],"ดำซ่อน ขาวโชว์","On a layer mask, which color hides the image?",["White","Black","Neither"],"Black hides, white reveals."],
+[2,"ทำไม Adjustment Layer จึงดีกว่าการปรับผ่าน Image › Adjustments?",["ทำงานเร็วกว่า","ภาพคมขึ้น","แก้ไขภายหลังได้และมีมาสก์ในตัว"],"แยกเป็นเลเยอร์จึงไม่ทำลายภาพต้นฉบับ","Why prefer Adjustment Layers over Image › Adjustments?",["Faster","Sharper image","Editable later and includes a mask"],"They stay separate, so the original is preserved."],
+[0,"ควรรีทัชบนอะไร?",["เลเยอร์ว่างใหม่","เลเยอร์ต้นฉบับโดยตรง","ยางลบบน Background"],"ถ้าไม่พอใจก็ลบเลเยอร์รีทัชทิ้งได้","Where should you retouch?",["A new empty layer","The original layer directly","Eraser on Background"],"If unhappy, delete the retouch layer."],
+[1,"ข้อความไทยควรเว้นบรรทัดประมาณเท่าไร?",["1.0 เท่า","1.4–1.6 เท่า","3 เท่า"],"สระและวรรณยุกต์ซ้อนสูง จึงต้องเว้นมากกว่าปกติ","Roughly what line spacing suits Thai text?",["1.0×","1.4–1.6×","3×"],"Stacked vowels and tone marks need extra room."],
+[2,"อยากเก็บไฟล์ที่ยังแก้เลเยอร์ได้ ต้องบันทึกเป็นอะไร?",["JPG","PNG","PSD"],"PSD เก็บเลเยอร์ มาสก์ และ Smart Object ไว้ครบ","Which format keeps layers editable?",["JPG","PNG","PSD"],"PSD keeps layers, masks and Smart Objects."]];
+var sel=[],ck=false,qz=document.getElementById("qz"),kb=document.getElementById("kb"),q=document.getElementById("q"),nav=document.getElementById("nav");
+var secs=[].slice.call(document.querySelectorAll(".lesson")),done={};
+try{done=JSON.parse(localStorage.getItem("ps-done")||"{}")}catch(e){}
+function save(){try{localStorage.setItem("ps-done",JSON.stringify(done))}catch(e){}}
+function prog(){var n=secs.filter(function(x){return done[x.id]}).length,p=Math.round(n/secs.length*100);document.getElementById("pct").textContent=p+"%";document.getElementById("fill").style.width=p+"%"}
+function drawK(){var t=q.value.trim().toLowerCase(),h="",i=L=="th"?0:1;K.forEach(function(r){if(!t||(r[0]+r[1]+r[2]).toLowerCase().indexOf(t)>-1)h+="<tr><td>"+r[i]+"</td><td><kbd>"+r[2]+"</kbd></td></tr>"});kb.innerHTML=h||"<tr><td colspan=2>"+T[L].nf+"</td></tr>"}
+function drawNav(){nav.innerHTML="";secs.forEach(function(x,i){var r=document.createElement("div");r.className="row";r.id="r-"+x.id;var b=document.createElement("button");b.textContent=done[x.id]?"👁":"–";b.setAttribute("aria-pressed",!!done[x.id]);b.setAttribute("aria-label","done "+(i+1));b.onclick=function(){done[x.id]=!done[x.id];b.setAttribute("aria-pressed",!!done[x.id]);b.textContent=done[x.id]?"👁":"–";save();prog()};var a=document.createElement("a");a.href="#"+x.id;a.textContent=(i+1)+". "+(L=="th"?x.dataset.t:TE[i]);r.appendChild(b);r.appendChild(a);nav.appendChild(r)});
+[["quiz","★"],["keys","⌨"]].forEach(function(e){var r=document.createElement("div");r.className="row";var b=document.createElement("button");b.textContent=e[1];b.tabIndex=-1;var a=document.createElement("a");a.href="#"+e[0];a.textContent=T[L][e[0]=="quiz"?"quiz":"keysn"];r.appendChild(b);r.appendChild(a);nav.appendChild(r)})}
+function drawQ(){var h="";Q.forEach(function(r,i){var d=L=="th"?r.slice(1,5):r.slice(5,9);h+="<fieldset><legend>"+(i+1)+". "+d[0]+"</legend>";d[1].forEach(function(o,j){var c="";if(ck){if(j==r[0])c=" ok";else if(sel[i]===j)c=" bad"}h+='<label class="opt'+c+'"><input type="radio" name="q'+i+'" value="'+j+'"'+(sel[i]===j?" checked":"")+(ck?" disabled":"")+"> "+o+"</label>"});if(ck)h+='<p class="ex">'+d[2]+"</p>";h+="</fieldset>"});qz.innerHTML=h}
+function result(){var r=document.getElementById("res");if(!ck){r.textContent="";return}var n=0;Q.forEach(function(x,i){if(sel[i]===x[0])n++});r.textContent=T[L].s+n+"/"+Q.length+" · "+(n>=7?T[L].g:n>=4?T[L].m:T[L].b)}
+qz.onchange=function(e){sel[+e.target.name.slice(1)]=+e.target.value};
+document.getElementById("chk").onclick=function(){var miss=0;Q.forEach(function(x,i){if(sel[i]===undefined)miss++});if(miss){document.getElementById("res").textContent=T[L].a+miss;return}ck=true;drawQ();result()};
+document.getElementById("rst").onclick=function(){sel=[];ck=false;drawQ();result()};
+function apply(){document.documentElement.lang=L;document.title=T[L].t;[].forEach.call(document.querySelectorAll("[data-k]"),function(e){e.textContent=T[L][e.dataset.k]});q.placeholder=T[L].ph;document.getElementById("lt").setAttribute("aria-pressed",L=="th");document.getElementById("le").setAttribute("aria-pressed",L=="en");drawNav();drawK();drawQ();result();prog()}
+function setL(l){L=l;try{localStorage.setItem("ps-lang",l)}catch(e){}apply()}
+document.getElementById("lt").onclick=function(){setL("th")};document.getElementById("le").onclick=function(){setL("en")};q.oninput=drawK;
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){[].forEach.call(document.querySelectorAll(".row"),function(x){x.classList.remove("on")});var r=document.getElementById("r-"+e.target.id);if(r)r.classList.add("on")}})},{rootMargin:"-30% 0px -60% 0px"});secs.forEach(function(x){io.observe(x)})}
+
+T.th.mt="ภาพจำลองหน้าจอ Photoshop";T.th.mn="คลิกส่วนต่างๆ ในภาพเพื่อดูว่าอยู่ตรงไหนและใช้ทำอะไร (ภาพแบบย่อ ตำแหน่งจริงอาจต่างตามเวอร์ชันและ Workspace)";
+T.en.mt="Photoshop screen mockup";T.en.mn="Click any part of the picture to see where it lives and what it does. This is a simplified view; real positions may vary by version and workspace.";
+var I={menu:["แถบเมนู","อยู่บนสุด มี File, Edit, Image, Layer, Window ถ้าแผงหาย ให้เปิดที่ Window","Menu bar","At the very top: File, Edit, Image, Layer, Window. Lost a panel? Open Window."],
+opts:["Options bar","แถบใต้เมนู ตัวเลือกเปลี่ยนตามเครื่องมือที่เลือก เช่น ขนาดแปรง","Options bar","Under the menu. Settings change with the active tool, e.g. brush size."],
+v:["Move (V)","บนสุดของแถบเครื่องมือซ้าย ใช้ย้ายเลเยอร์","Move (V)","Top of the left toolbar. Moves layers."],
+m:["Marquee (M)","ช่องที่สอง เลือกพื้นที่สี่เหลี่ยมหรือวงรี","Marquee (M)","Second slot. Rectangle and ellipse selections."],
+l:["Lasso (L)","ใต้ Marquee ลากเส้นเลือกพื้นที่อิสระ","Lasso (L)","Below Marquee. Freehand selections."],
+w:["Object Selection (W)","ใต้ Lasso อยู่กลุ่มเดียวกับ Quick Selection และ Magic Wand ลากคร่อมวัตถุให้โปรแกรมเลือก","Object Selection (W)","Below Lasso, grouped with Quick Selection and Magic Wand. Drag over an object."],
+c:["Crop (C)","ใต้กลุ่มเครื่องมือเลือก ตัดภาพ จัดองค์ประกอบ และใช้ทำ Generative Expand","Crop (C)","Below the selection tools. Crop, recompose, and Generative Expand."],
+j:["Remove / Healing (J)","กลุ่มรีทัช ลบสิว รอย หรือสิ่งที่ไม่ต้องการ","Remove / Healing (J)","The retouch group: blemishes, dust, unwanted objects."],
+b:["Brush (B)","กลุ่มวาดภาพ ใช้ระบายบนมาสก์ได้ด้วย","Brush (B)","The painting group. Also paints on masks."],
+s:["Clone Stamp (S)","ใต้ Brush คัดลอกพิกเซลจากอีกจุดมาทับ","Clone Stamp (S)","Under Brush. Copies pixels from another spot."],
+e:["Eraser (E)","ลบพิกเซลถาวร งานที่ต้องแก้ภายหลังควรใช้มาสก์แทน","Eraser (E)","Erases pixels permanently. Prefer masks for editable work."],
+t:["Type (T)","พิมพ์ข้อความ ตัวเลือกฟอนต์อยู่ที่ Options bar","Type (T)","Adds text. Font settings appear in the Options bar."],
+u:["Rectangle (U)","วาดรูปทรงเวกเตอร์ เช่น ปุ่ม กรอบ","Rectangle (U)","Draws vector shapes such as buttons and frames."],
+canvas:["Canvas","พื้นที่ตรงกลางที่แสดงภาพ เลื่อนด้วย Space + ลาก","Canvas","The center area showing your image. Pan with Space + drag."],
+task:["Contextual Task Bar","แถบลอยใต้ภาพ ปุ่มเปลี่ยนตามสิ่งที่ทำ เช่น Generative Fill หลังเลือกพื้นที่","Contextual Task Bar","Floats under the image. Buttons change with context, e.g. Generative Fill after a selection."],
+props:["แผง Properties","ขวาบน แสดงค่าของเลเยอร์หรือมาสก์ที่เลือก เช่น Feather","Properties panel","Upper right. Shows settings for the selected layer or mask, such as Feather."],
+layers:["แผง Layers","ขวาล่าง รายการเลเยอร์ ลากเรียงลำดับ กดรูปดวงตาเพื่อซ่อนหรือแสดง","Layers panel","Lower right. Drag to reorder; click the eye to show or hide."],
+blend:["Blend Mode และ Opacity","แถวบนสุดของแผง Layers ปรับวิธีผสมสีและความโปร่งใส","Blend Mode and Opacity","Top row of the Layers panel. Sets color mixing and transparency."],
+mask:["Add Layer Mask","ปุ่มไอคอนสี่เหลี่ยมมีวงกลม แถวล่างสุดของแผง Layers","Add Layer Mask","The rectangle-with-circle icon in the bottom row of the Layers panel."],
+adj:["Adjustment Layer","ปุ่มวงกลมครึ่งดำครึ่งขาว แถวล่างของแผง Layers","Adjustment Layer","The half-black, half-white circle in the bottom row of Layers."],
+newl:["New Layer","ปุ่ม + แถวล่างของแผง Layers หรือกด Ctrl+Shift+N","New Layer","The + button in the bottom row of Layers, or press Ctrl+Shift+N."]};
+var cur="w";
+function showI(id){cur=id;var d=I[id],i=L=="th"?0:2,n=document.getElementById("info");n.firstChild.textContent=d[i];n.lastChild.textContent=d[i+1];[].forEach.call(document.querySelectorAll(".hs"),function(x){x.classList.toggle("on",x.dataset.h==id)})}
+document.getElementById("ps").onclick=function(e){var h=e.target.closest("[data-h]");if(h)showI(h.dataset.h)};
+var _ap=apply;apply=function(){_ap();showI(cur)};
+
+T.th.hp="8 บทเรียน แต่ละบทเริ่มด้วยคลิปการ์ตูนอนิเมชันประมาณ 1 นาทีครึ่ง แล้วตามด้วยเนื้อหาละเอียด กดรูปดวงตาในแผงด้านข้างเมื่อเรียนจบแต่ละบท";
+T.en.hp="8 lessons, each opening with a ~75-second animated cartoon clip followed by detailed notes. Click the eye in the side panel when you finish a lesson.";
+function R(x,y,w,h,f,c,d,r,o){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(r||0)+'" fill="'+f+'" class="'+(c||'')+'" style="--d:'+(d||0)+'s'+(o||'')+'"/>'}
+function C(x,y,r,f,c,d,o){return '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+f+'" class="'+(c||'')+'" style="--d:'+(d||0)+'s'+(o||'')+'"/>'}
+function X(x,y,t,s,c,f,d){return '<text x="'+x+'" y="'+y+'" font-size="'+(s||14)+'" fill="'+(f||'#1b2233')+'" class="'+(c||'')+'" style="--d:'+(d||0)+'s" font-family="Prompt,sans-serif" font-weight="700">'+t+'</text>'}
+function G(c,b,d){return '<g class="'+c+'" style="--d:'+(d||0)+'s">'+b+'</g>'}
+function PH(x,y,w,h){return R(x,y,w,h,'#ffb677',0,0,6)+C(x+w*.72,y+h*.3,h*.16,'#fff3c4')+'<path d="M'+x+' '+(y+h)+'V'+(y+h*.62)+'L'+(x+w*.3)+' '+(y+h*.34)+'L'+(x+w*.55)+' '+(y+h*.7)+'L'+(x+w*.75)+' '+(y+h*.52)+'L'+(x+w)+' '+(y+h*.8)+'V'+(y+h)+'Z" fill="#3b4a8c"/>'}
+function PE(x,y,s,c,d){return G(c||'','<g transform="translate('+x+' '+y+') scale('+s+')"><use href="#pp"/></g>',d)}
+var SK=';stroke:#1b2233;stroke-width:2',BL=';mix-blend-mode:multiply',SC=';mix-blend-mode:screen';
+var V={
+ui:function(h){var z={M:[10,10,226,12],O:[10,25,226,12],T:[10,40,26,126],C:[40,40,120,126],P:[164,40,72,126]}[h],o=R(6,6,234,166,'#2d2d30',0,0,8)+R(10,10,226,12,'#44444a')+R(10,25,226,12,'#3a3a3f')+R(10,40,26,126,'#3a3a3f')+R(164,40,72,126,'#3a3a3f')+R(40,40,120,126,'#1e1e20')+PH(46,64,108,78)+R(170,70,60,16,'#55555b')+R(170,92,60,16,'#55555b')+R(170,114,60,16,'#55555b');for(var i=0;i<5;i++)o+=R(14,46+i*24,18,18,'#55555b');return o+(z?'<rect x="'+z[0]+'" y="'+z[1]+'" width="'+z[2]+'" height="'+z[3]+'" fill="none" stroke="#ffd21f" stroke-width="3" class="pl"/>':'')},
+doc:function(){return G('gr',R(70,22,100,125,'#fff',0,0,4,';stroke:#2d5bff;stroke-width:3'))+X(60,168,'1080 × 1350 px',15,'fi','#2d5bff',1)+R(40,22,4,125,'#2d5bff','fi',1)+R(70,152,100,4,'#2d5bff','fi',1)},
+ppi:function(){var o=X(30,28,'72 ppi',14)+X(140,28,'300 ppi',14),i,j;for(i=0;i<4;i++)for(j=0;j<4;j++)o+=C(40+i*18,50+j*18,5,'#2d5bff','pop',(i+j)*.1);for(i=0;i<10;i++)for(j=0;j<10;j++)o+=C(142+i*8,50+j*8,2,'#2d5bff','pop',1.2+(i+j)*.05);return o},
+mode:function(){return R(0,0,125,180,'#111')+X(40,26,'RGB',14,'','#fff')+C(55,80,28,'#f00','pop',.2,SC)+C(85,80,28,'#0f0','pop',.5,SC)+C(70,106,28,'#00f','pop',.8,SC)+X(160,26,'CMYK',14)+C(165,80,28,'#0ff','pop',1.2,BL)+C(195,80,28,'#f0f','pop',1.5,BL)+C(180,106,28,'#ff0','pop',1.8,BL)},
+smart:function(){return G('sg',PH(50,45,120,80))+X(55,155,'Smart Object',14,'fi','#2d5bff',1)},
+stack:function(){return R(50,100,150,56,'#8fd3a8','sl',0,8)+R(70,72,150,56,'#2d5bff','sl',1,8)+R(90,44,150,56,'#ffd21f','sl',2,8)},
+dup:function(){return R(60,55,110,72,'#2d5bff',0,0,8)+R(80,75,110,72,'#2d5bff','pop',1,8,';stroke:#fff;stroke-width:2')+X(60,166,'Ctrl + J',16,'fi','#2d5bff',1)},
+eye:function(){var o='';['#ffd21f','#2d5bff','#8fd3a8'].forEach(function(a,i){o+=R(14,30+i*44,100,36,'#dfe3ee',0,0,6)+'<ellipse cx="34" cy="'+(48+i*44)+'" rx="12" ry="7" fill="none" stroke="#1b2233" stroke-width="2.5"/>'+C(34,48+i*44,3.5,'#1b2233')+R(52,36+i*44,52,24,a,0,0,4)});return o+'<path d="M22 58L46 38" stroke="#e03" stroke-width="4" class="fi" style="--d:1.5s"/>'+R(130,70,100,56,'#8fd3a8',0,0,8)+R(142,58,100,56,'#2d5bff',0,0,8)+R(154,46,86,56,'#ffd21f','fo',1.6,8)},
+blend:function(){return C(100,90,48,'#ff6fb1','pop')+C(150,90,48,'#2d9bff','pop',.8,BL)+X(95,168,'Multiply',16,'fi','#2d5bff',1.5)},
+xf:function(){var h=function(x,y){return R(x,y,12,12,'#fff',0,0,0,SK)};return G('rt',R(80,50,90,70,'#2d5bff',0,0,4)+h(74,44)+h(164,44)+h(74,114)+h(164,114))+X(80,166,'Ctrl + T',16,'fi','#2d5bff',1)},
+bg:function(){return R(40,30,170,120,'#8fd3a8',0,0,8)+PE(29,6,1.2)},
+sel:function(){return V.bg()+'<g class="mc" fill="none" stroke="#1b2233" stroke-width="2.5"><circle cx="125" cy="61" r="21"/><path d="M87 137Q125 72 163 137Z"/></g>'},
+msk:function(){return R(40,30,170,120,'url(#ck)',0,0,8)+R(40,30,170,120,'#8fd3a8','fo',1,8)+PE(29,6,1.2)},
+brs:function(){return C(70,70,36,'#111')+'<path d="M50 90L90 50" stroke="#fff" stroke-width="5"/>'+C(170,70,36,'#fff',0,0,SK)+'<ellipse cx="170" cy="70" rx="22" ry="12" fill="none" stroke="#1b2233" stroke-width="4"/>'+C(170,70,6,'#1b2233')+'<path d="M30 140Q125 175 220 140" stroke="#ff6fb1" stroke-width="9" fill="none" stroke-linecap="round" class="dr" pathLength="100"/>'},
+dk:function(){return G('dk',PH(40,40,150,100))},
+lv:function(){var H=[10,22,40,58,70,52,30,16,8],o=G('br',PH(30,40,130,90));H.forEach(function(h,i){o+=R(172+i*8,130-h,6,h,'#8b93a7','sl',i*.1)});return o+'<path d="M172 140l6-9h-12z" fill="#111"/><path d="M244 140l6-9h-12z" fill="#fff" stroke="#111"/>'},
+cv:function(){return R(30,20,150,150,'#fff',0,0,6,';stroke:#c9cedb')+'<path d="M30 170L180 20" stroke="#c9cedb" stroke-dasharray="5"/><path d="M30 170Q75 170 105 95T180 20" fill="none" stroke="#2d5bff" stroke-width="4" class="dr" pathLength="100"/>'},
+vb:function(){var o='';['#ff6fb1','#ffd21f','#2d9bff','#4cc79b'].forEach(function(k,i){o+=C(40+i*48,90,20,k)});return G('sa',o)},
+ly:function(){return R(30,40,180,40,'#dfe3ee','pop',0,6)+PH(36,44,40,32)+R(30,90,180,40,'#dfe3ee','pop',1,6)+C(56,110,14,'#fff','pop',1.4,SK)+'<path d="M56 96a14 14 0 0 1 0 28z" fill="#1b2233" class="fi" style="--d:1.4s"/>'+R(100,98,100,24,'#fff','pop',1.6,4)},
+fc:function(v){var o=C(110,90,56,'#f4c7a1')+C(92,80,5,'#1b2233')+C(128,80,5,'#1b2233')+'<path d="M92 108q18 14 36 0" stroke="#1b2233" stroke-width="3" fill="none"/>';[[88,100],[132,98],[110,64]].forEach(function(p,i){o+=C(p[0],p[1],4,'#d6525f',v?'fo':'',v?1+i*.5:0)});return o+(v?'<circle cx="88" cy="100" r="12" fill="none" stroke="#2d5bff" stroke-width="3" class="pl"/>':'')},
+rm:function(){return PH(40,40,170,110)+PE(98,64,.5,'fo',2.8)+G('fo','<path d="M138 80V116" stroke="#ff6fb1" stroke-width="22" stroke-linecap="round" opacity=".6" fill="none" class="dr" pathLength="100" style="--d:.8s"/>',2.9)},
+cl:function(){return PH(40,40,170,110)+'<circle cx="90" cy="110" r="14" fill="none" stroke="#1b2233" stroke-width="2.5"/><path d="M90 92v36M72 110h36" stroke="#1b2233" stroke-width="2" class="pl"/><circle cx="170" cy="110" r="14" fill="none" stroke="#ff6fb1" stroke-width="3" stroke-dasharray="4" class="pl"/>'+C(170,110,9,'#fff3c4','pop',1.5)},
+nl:function(){return R(30,40,180,40,'#dfe3ee',0,0,6)+PH(36,44,40,32)+R(30,90,180,40,'#fff','sl',.8,6,';stroke:#2d5bff;stroke-width:2')+R(36,94,40,32,'url(#ck)','sl',.8,4)+X(100,118,'+',24,'pop','#2d5bff',1.5)},
+ty:function(){return X(40,110,'Hello',48,'ty','#2d5bff')+R(158,70,3,46,'#1b2233','pl')},
+pg:function(){var o=R(40,30,160,100,'none','',0,4,';stroke:#2d5bff;stroke-width:2;stroke-dasharray:6 4'),i;for(i=0;i<5;i++)o+=R(52,44+i*18,i==4?70:136,8,'#8b93a7','sl',.4+i*.4,4);return o},
+hi:function(){return X(40,70,'Title',40,'fi')+R(40,90,150,7,'#8b93a7','fi',1,3)+R(40,106,150,7,'#8b93a7','fi',1.3,3)+R(40,122,110,7,'#8b93a7','fi',1.6,3)},
+sp:function(){var o='';for(var i=0;i<3;i++)o+=R(40,40+i*34,150,10,'#1b2233','fi',i*.4,3);return o+'<path d="M205 52v22M199 58l6-8 6 8M199 68l6 8 6-8" stroke="#ff6fb1" stroke-width="3" fill="none" class="pl"/>'},
+ov:function(){return PH(30,30,190,120)+X(50,100,'Hello',32,'','#ffd21f')+R(30,70,190,44,'rgba(27,34,51,.78)','sl',1)+X(50,102,'Hello',32,'fi','#fff',1.6)},
+sl:function(){return PH(30,30,190,120)+R(130,60,64,50,'none','mc',0,0,';stroke:#1b2233;stroke-width:2.5')},
+gf:function(){return V.sl()+C(162,88,14,'#ff6fb1','pop',1)+R(160,100,4,22,'#4cc79b','pop',1.3)+X(116,62,'✦',22,'pop','#ffd21f',1.5)+X(194,112,'✦',18,'pop','#fff',1.8)+X(138,130,'✦',14,'pop','#ffd21f',2.1)},
+ex:function(){return R(20,25,210,120,'#cfe3ff','fi',1.2,6)+'<path d="M20 145V105L70 70L110 110L150 80L230 125V145Z" fill="#3b4a8c" class="fi" style="--d:1.8s"/>'+PH(75,50,100,70)+R(20,25,210,120,'none','mc',0,6,';stroke:#2d5bff;stroke-width:3')},
+ck:function(){return PH(30,30,190,120)+'<circle cx="150" cy="85" r="30" fill="rgba(255,255,255,.35)" stroke="#1b2233" stroke-width="5" class="pl"/><path d="M172 107L200 135" stroke="#1b2233" stroke-width="7" stroke-linecap="round"/>'},
+fin:function(){var o='';[['PSD','#2d5bff'],['JPG','#ff6fb1'],['PNG','#4cc79b']].forEach(function(a,i){var d=i*.6,x=28+i*74;o+=R(x,50,60,76,'#fff','pop',d,6,';stroke:'+a[1]+';stroke-width:3')+R(x,50,60,22,a[1],'pop',d,6)+X(x+8,67,a[0],15,'pop','#fff',d)+R(x+12,86,36,5,'#c9cedb','pop',d+.2)+R(x+12,98,26,5,'#c9cedb','pop',d+.2)});return o}};
+var CL=[
+[["ui","ยินดีต้อนรับ! มาดูหน้าจอ Photoshop ทีละส่วนกัน","Welcome! Let’s tour the Photoshop screen one part at a time."],["ui:M","บนสุดคือแถบเมนู ถ้าแผงหายให้เปิดที่ Window","At the top is the menu bar. If a panel goes missing, open Window."],["ui:T","ซ้ายคือแถบเครื่องมือ ไอคอนที่มีสามเหลี่ยมเล็กๆ กดค้างเพื่อเปิดเครื่องมือซ่อน","On the left is the toolbar. Icons with a small triangle hide more tools: press and hold."],["ui:O","ใต้เมนูคือ Options bar ตัวเลือกจะเปลี่ยนตามเครื่องมือที่เลือก","Under the menu is the Options bar; its settings change with the active tool."],["ui:P","ขวาคือแผง Layers และ Properties ที่คุณจะใช้บ่อยที่สุด","On the right are Layers and Properties, the panels you will use most."]],
+[["doc","เริ่มจากกด Ctrl+N แล้วเลือกขนาดงาน เช่น 1080 × 1350 px สำหรับโพสต์ Instagram","Press Ctrl+N and choose a size, such as 1080 × 1350 px for an Instagram post."],["ppi","งานบนจอใช้ 72 ppi งานพิมพ์ใช้ 300 ppi จุดยิ่งถี่ ภาพยิ่งคม","Screens use 72 ppi, print uses 300 ppi. More dots per inch means a sharper image."],["mode","งานบนจอใช้โหมด RGB ส่วนงานโรงพิมพ์มักใช้ CMYK ถามโรงพิมพ์ก่อนนะ","Screens use RGB; print shops often use CMYK. Ask your printer first."],["smart","คลิกขวาที่เลเยอร์แล้วเลือก Convert to Smart Object ย่อแล้วขยายกลับ ภาพก็ไม่เสียรายละเอียด","Right-click a layer and choose Convert to Smart Object. Shrink and enlarge without losing detail."],["doc","ตั้งค่าให้ถูกตั้งแต่แรก ไม่ต้องกลับมาแก้ให้เสียเวลาทีหลัง","Set it up right from the start and save yourself rework later."]],
+[["stack","เลเยอร์เหมือนแผ่นใสวางซ้อนกัน ตัวบนบังตัวล่างเสมอ","Layers are like clear sheets stacked up: the top one always covers the ones below."],["dup","กด Ctrl+J เพื่อทำสำเนาเลเยอร์ แก้สำเนาได้โดยต้นฉบับไม่เสีย","Press Ctrl+J to duplicate a layer. Edit the copy and keep the original safe."],["eye","กดรูปดวงตาเพื่อซ่อนหรือแสดงเลเยอร์ ซ่อนไว้ก็ยังอยู่ ไม่ได้ถูกลบ","Click the eye to hide or show a layer. Hidden is not deleted."],["blend","Blend Mode อย่าง Multiply ผสมสีให้เข้มลง และปรับ Opacity ให้โปร่งขึ้นได้","A Blend Mode like Multiply darkens by mixing colors; Opacity makes a layer see-through."],["xf","กด Ctrl+T เพื่อย่อ ขยาย หมุน กด Shift ค้างเพื่อรักษาสัดส่วน แล้วกด Enter ยืนยัน","Press Ctrl+T to scale and rotate. Hold Shift to keep proportions, then press Enter."]],
+[["bg","อยากตัดพื้นหลังออก อย่าเพิ่งใช้ยางลบ เพราะลบแล้วย้อนกลับไม่ได้ ใช้เลเยอร์มาสก์แทน","Want to remove a background? Skip the eraser, which is permanent. Use a layer mask."],["sel","ใช้ Select Subject เลือกตัวแบบ จะเห็นเส้นประวิ่งรอบวัตถุ","Use Select Subject. Marching ants will run around your subject."],["msk","กดปุ่ม Add Layer Mask พื้นหลังจะหายไป แต่ไม่ได้ถูกลบจริง","Click Add Layer Mask. The background disappears but is not truly deleted."],["brs","ระบายบนมาสก์ด้วยแปรงสีดำเพื่อซ่อนเพิ่ม สีขาวเพื่อเอากลับมา กด X สลับสี","Paint on the mask: black hides more, white brings it back. Press X to swap colors."],["msk","จำง่ายๆ ดำซ่อน ขาวโชว์ ผิดพลาดก็แก้ได้เสมอ","Easy to remember: black hides, white reveals. Mistakes are always fixable."]],
+[["dk","ภาพมืดและซีดแก้ได้ ใช้ Adjustment Layer ที่แก้ไขภายหลังได้","Dark, dull photos are fixable. Use Adjustment Layers you can edit later."],["lv","Levels ดึงแถบดำและขาวเข้าหาขอบกราฟ ภาพจะสว่างและชัดขึ้น","Levels: pull the black and white sliders to the graph edges for a brighter, clearer image."],["cv","Curves ดึงเส้นเป็นรูปตัว S อ่อนๆ เพื่อเพิ่มคอนทราสต์","Curves: pull a gentle S shape to add contrast."],["vb","Vibrance เพิ่มความสดของสี โดยไม่ทำให้สีผิวเพี้ยน","Vibrance boosts color without wrecking skin tones."],["ly","Adjustment Layer มีมาสก์ในตัว แก้ไขหรือปิดได้ทุกเมื่อ ต้นฉบับไม่เสียหาย","Adjustment Layers include a mask. Edit or switch them off anytime; the original stays intact."]],
+[["fc","สิว รอยเปื้อน หรือคนที่เดินเข้ามาในภาพ ลบได้ในไม่กี่คลิก","Pimples, smudges, or a stranger in the shot can be removed in a few clicks."],["fc:1","Spot Healing Brush แตะที่สิวหนึ่งที ก็หายไป","Spot Healing Brush: tap the blemish once and it is gone."],["rm","Remove Tool ระบายทับสิ่งที่ไม่ต้องการ แล้วปล่อยเมาส์ โปรแกรมเติมพื้นหลังให้","Remove Tool: paint over the unwanted item and release; the background is filled in."],["cl","Clone Stamp กด Alt คลิกเลือกต้นทาง แล้วระบายทับตำแหน่งที่ต้องการ","Clone Stamp: Alt+click a source, then paint where you need it."],["nl","ทำบนเลเยอร์ว่างใหม่เสมอ ไม่พอใจก็ลบเลเยอร์นั้นทิ้ง ต้นฉบับยังอยู่ครบ","Always retouch on a new empty layer. Unhappy? Delete it; the original is untouched."]],
+[["ty","กด T คลิกบนภาพ แล้วพิมพ์ข้อความได้เลย กด Ctrl+Enter เพื่อยืนยัน","Press T, click the image and type. Press Ctrl+Enter to confirm."],["pg","ลากเป็นกล่องเพื่อสร้าง Paragraph Text ข้อความจะตัดบรรทัดให้เอง","Drag a box for Paragraph Text; lines wrap automatically."],["hi","ใช้ฟอนต์ไม่เกินสองแบบ แยกหัวข้อกับเนื้อหาด้วยขนาดและน้ำหนัก","Use at most two fonts. Separate headings from body with size and weight."],["sp","ข้อความไทยควรเว้นบรรทัดประมาณ 1.4 ถึง 1.6 เท่า เพราะสระและวรรณยุกต์ซ้อนสูง","Thai text needs about 1.4–1.6× line spacing because of stacked vowels and tone marks."],["ov","ข้อความอ่านยากบนรูป? ใส่แผ่นสีโปร่งแสงรองไว้ จะอ่านง่ายขึ้นทันที","Text hard to read on a photo? Put a translucent panel behind it."]],
+[["sl","เลือกพื้นที่ที่อยากแก้ด้วย Lasso หรือ Object Selection","Select the area to change with Lasso or Object Selection."],["gf","กด Generative Fill พิมพ์สิ่งที่ต้องการ แล้ว AI จะสร้างผลลัพธ์เป็นเลเยอร์แยกให้","Click Generative Fill and type what you want. AI creates results on separate layers."],["ex","Generative Expand: ลาก Crop ให้กว้างกว่าภาพ แล้วกด Generate เพื่อขยายฉาก","Generative Expand: drag Crop beyond the image and click Generate to extend the scene."],["ck","อย่าลืมตรวจมือ ตัวอักษร และรายละเอียดเล็กๆ ที่ AI สร้างก่อนใช้งานจริง","Always check hands, text and small details AI generates before real use."],["fin","จบแล้ว! เซฟ PSD เก็บไว้แก้ต่อ แล้วส่งออก JPG หรือ PNG ไปใช้งาน","Done! Save a PSD to keep editing, then export JPG or PNG to share."]]];
+
+T.th.hp="8 บทเรียน แต่ละบทเริ่มด้วยคลิปการ์ตูนอนิเมชันประมาณ 1 นาทีครึ่ง กดปุ่ม “เปิดเสียง” มุมขวาบนเพื่อฟังเสียงบรรยาย เสียงประกอบ และดนตรี";
+T.en.hp="8 lessons, each opening with a ~75-second animated cartoon clip. Press “Sound on” at the top right for narration, sound effects and music.";
+T.th.s1="🔇 เปิดเสียง";T.th.s0="🔊 ปิดเสียง";T.en.s1="🔇 Sound on";T.en.s0="🔊 Sound off";
+T.th.nv="อุปกรณ์นี้ไม่มีเสียงอ่านภาษาไทย จะได้ยินเฉพาะเสียงประกอบและดนตรี (ลองสลับเป็น EN เพื่อฟังเสียงบรรยายภาษาอังกฤษ)";
+T.en.nv="No narration voice for this language was found on this device, so you will hear only sound effects and music.";
+var DUR=15000,NAR=9000,CP=[],SS=window.speechSynthesis,AC=null,SND=false,MUI=null,MS=0,SCL=[262,294,330,392,440,523,440,392];
+var BG=[["#e3edff","#f1e6ff"],["#e6f7ef","#e3edff"],["#fff1dc","#ffe6f0"],["#e6f7ef","#fff7d6"],["#fff1dc","#e6efff"],["#ffe6f0","#f3e8ff"],["#e3edff","#e6f7ef"],["#f1e6ff","#ffe9dc"]];
+function ctx(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AC&&AC.state=="suspended")AC.resume();return AC}
+function tone(f,d,ty,v,f2){var a=AC;if(!a)return;var o=a.createOscillator(),g=a.createGain(),n=a.currentTime;o.type=ty||"sine";o.frequency.setValueAtTime(f,n);if(f2)o.frequency.exponentialRampToValueAtTime(f2,n+d);g.gain.setValueAtTime(v||.08,n);g.gain.exponentialRampToValueAtTime(.001,n+d);o.connect(g);g.connect(a.destination);o.start(n);o.stop(n+d)}
+function sfx(k){if(!SND||!ctx())return;if(k=="pop")tone(520,.12,"sine",.09,900);else if(k=="sl")tone(200,.3,"triangle",.05,700);else if(k=="fi")tone(880,.15,"sine",.03);else if(k=="ding"){tone(660,.4,"sine",.07);setTimeout(function(){tone(990,.5,"sine",.06)},120)}}
+function music(){var w=SND&&CP.some(function(c){return c.on()});if(w&&!MUI){ctx();mbus();MUI=setInterval(msch,120)}else if(!w&&MUI){clearInterval(MUI);MUI=null;NT=0}}
+function hasV(){var lg=L=="th"?"th":"en";return SS&&SS.getVoices().some(function(x){return x.lang.toLowerCase().indexOf(lg)==0})}
+function updSnd(){var b=document.getElementById("sn");b.textContent=SND?T[L].s0:T[L].s1;b.setAttribute("aria-pressed",SND);[].forEach.call(document.querySelectorAll(".vo"),function(x){x.setAttribute("aria-pressed",SND)});document.body.classList.toggle("nth",SND&&!hasV())}
+function setSnd(v){SND=v;if(v)ctx();else if(SS)SS.cancel();updSnd();CP.forEach(function(c){if(c.on())c.say()});music()}
+if(SS)SS.onvoiceschanged=updSnd;
+function CUR(x1,y1,x2,y2,d){return '<g class="cur" style="--x1:'+x1+'px;--y1:'+y1+'px;--x2:'+x2+'px;--y2:'+y2+'px;--d:'+d+'s"><path d="M0 0L0 17L4.5 13L7.5 20L11 18.5L8 12H13Z" fill="#fff" stroke="#111" stroke-width="1.3"/></g>'+C(x2,y2,3,'none','rip',d+1.6,';stroke:#2d5bff;stroke-width:2')}
+var _ui=V.ui,ZC={M:[123,16],O:[123,31],T:[23,103],C:[100,103],P:[200,103]};
+V.ui=function(h){return _ui(h)+(ZC[h]?CUR(210,160,ZC[h][0],ZC[h][1],.4):'')};
+V.msk=function(){return R(40,30,170,120,'url(#ck)',0,0,8)+R(40,30,170,120,'#8fd3a8','fo',2.2,8)+PE(29,6,1.2)+R(218,24,28,24,'#fff',0,0,5,SK)+C(232,36,6,'#1b2233')+CUR(150,130,232,38,.2)};
+var _gf=V.gf;V.gf=function(){return _gf()+R(30,152,100,22,'#2d5bff',0,0,11)+X(44,167,'Generate',12,'','#fff')+CUR(200,100,80,163,-.6)};
+function MX(){return '<g transform="translate(258 110) scale(.58)"><g class="mb"><rect x="14" y="24" width="72" height="66" rx="18" fill="#2d5bff"/><rect x="22" y="32" width="56" height="50" rx="12" fill="#fff"/><g class="bl"><circle cx="40" cy="54" r="6" fill="#1b2233"/><circle cx="60" cy="54" r="6" fill="#1b2233"/></g><circle cx="42" cy="52" r="2" fill="#fff"/><circle cx="62" cy="52" r="2" fill="#fff"/><path class="mth" d="M41 66q9 8 18 0" stroke="#1b2233" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="31" cy="66" r="4" fill="#ff9ec4" opacity=".7"/><circle cx="69" cy="66" r="4" fill="#ff9ec4" opacity=".7"/><path d="M26 26Q50 0 76 24Q52 16 26 26Z" fill="#ff6fb1"/><circle cx="51" cy="8" r="4" fill="#ff6fb1"/><g class="arm"><path d="M88 74L98 44" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"/><circle cx="99" cy="40" r="5" fill="#ffd21f"/></g></g></g>'}
+
+T.th.hp="8 บทเรียน แต่ละบทเริ่มด้วยคลิปการ์ตูนอนิเมชัน 7 ฉาก ยาวประมาณ 1 นาทีครึ่งถึง 2 นาที กดปุ่ม “เปิดเสียง” มุมขวาบนเพื่อฟังเสียงบรรยาย และกด ⚙ เพื่อเลือกเสียงที่ฟังเป็นธรรมชาติที่สุด";
+T.en.hp="8 lessons, each opening with a 7-scene animated clip of about 90–120 seconds. Press “Sound on” at the top right for narration, and ⚙ to choose the most natural voice.";
+T.th.vl="เสียงบรรยาย";T.th.rl="ความเร็ว";T.th.vt="ทดลองฟัง";T.th.va="อัตโนมัติ (แนะนำ)";T.th.vs="สวัสดีครับ ยินดีต้อนรับสู่คอร์ส Photoshop";T.th.vh="เสียงธรรมชาติที่สุดมักได้จาก Microsoft Edge (เลือกเสียงที่มีคำว่า Natural หรือ Online เช่น Premwadee) หรือ Chrome ที่มีเสียง Google ภาษาไทย";
+T.en.vl="Narration voice";T.en.rl="Speed";T.en.vt="Test voice";T.en.va="Auto (recommended)";T.en.vs="Hello, welcome to the Photoshop course.";T.en.vh="For the most natural sound, use Microsoft Edge and pick a voice marked Natural or Online, or Chrome with Google voices installed.";
+var RATE=.95,VN="";try{RATE=+localStorage.getItem("ps-rate")||.95;VN=localStorage.getItem("ps-vn")||""}catch(e){}
+function vsc(v){var n=v.name.toLowerCase(),q=0;if(/natural|neural|online|premium|enhanced|siri/.test(n))q+=5;if(/google/.test(n))q+=3;if(/premwadee|niwat|achara|kanya|narisa|aria|jenny|guy|samantha|ava/.test(n))q+=3;if(/compact|espeak|robot/.test(n))q-=4;if(v.localService===false)q+=1;return q}
+function VL(){var lg=L=="th"?"th":"en";return SS?SS.getVoices().filter(function(x){return x.lang.toLowerCase().indexOf(lg)==0}).sort(function(a,b){return vsc(b)-vsc(a)}):[]}
+function pick(){var l=VL();return l.filter(function(x){return x.name==VN})[0]||l[0]}
+function hasV(){return VL().length>0}
+function fillV(){var e=document.getElementById("vs");e.innerHTML="";var o=document.createElement("option");o.value="";o.textContent=T[L].va;e.appendChild(o);VL().forEach(function(v){var x=document.createElement("option");x.value=v.name;x.textContent=v.name;if(v.name==VN)x.selected=true;e.appendChild(x)})}
+if(SS)SS.onvoiceschanged=function(){updSnd();fillV()};
+document.getElementById("gb").onclick=function(){var o=document.getElementById("vp").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+document.getElementById("vs").onchange=function(){VN=this.value;try{localStorage.setItem("ps-vn",VN)}catch(e){}};
+var rg=document.getElementById("rt");rg.value=RATE;document.getElementById("rv").textContent=RATE.toFixed(2);rg.oninput=function(){RATE=+this.value;document.getElementById("rv").textContent=RATE.toFixed(2);try{localStorage.setItem("ps-rate",RATE)}catch(e){}};
+document.getElementById("vtest").onclick=function(){if(!SS)return;SS.cancel();var u=new SpeechSynthesisUtterance(T[L].vs),v=pick();u.lang=L=="th"?"th-TH":"en-US";if(v)u.voice=v;u.rate=RATE;SS.speak(u)};
+function KEY(k){var a=k.split("+"),y0=104-a.length*22,o='';a.forEach(function(t,i){var w=Math.max(26,t.length*8+14),y=y0+i*22;o+='<g class="kp" style="--d:'+(1+i*.2)+'s">'+R(256,y+3,w,17,'#1b2233',0,0,5)+R(256,y,w,17,'#fff',0,0,5,SK)+X(262,y+13,t,11,'','#1b2233')+'</g>'});return G('fi',o,.3)}
+V.cvs=function(){return G('gr',R(40,30,170,120,'url(#ck)',0,0,6))+PH(90,60,70,60)+X(50,168,'Canvas Size',14,'fi','#2d5bff',1)};
+V.blur=function(){return G('zb',PH(90,60,60,45))+X(60,168,'Upscale',14,'fi','#e03',1.5)};
+V.grp=function(){return R(40,60,70,20,'#8fd3a8','fo',1.5,4)+R(50,48,70,20,'#2d5bff','fo',1.5,4)+R(60,36,70,20,'#ffd21f','fo',1.5,4)+R(140,50,90,70,'#ffd98a','pop',1.6,8)+R(140,42,36,14,'#ffc34d','pop',1.6,5)+R(150,66,70,8,'#8fd3a8','pop',2,3)+R(150,80,70,8,'#2d5bff','pop',2.2,3)+R(150,94,70,8,'#ffd21f','pop',2.4,3)};
+V.lk=function(){return R(30,60,190,44,'#dfe3ee',0,0,6)+PH(36,66,40,32)+X(88,89,'Layer 1',16,'fo','#1b2233',1.2)+X(88,89,'Sky',16,'ty','#2d5bff',1.4)+R(176,74,24,18,'#1b2233','pop',2.6,3)+'<path d="M181 74v-6a7 7 0 0 1 14 0v6" fill="none" stroke="#1b2233" stroke-width="3" class="pop" style="--d:2.6s"/>'};
+V.edge=function(){var p='',i,a,r;for(i=0;i<24;i++){a=i*Math.PI/12;r=i%2?27:21;p+=(i?'L':'M')+(110+r*Math.cos(a)).toFixed(1)+' '+(80+r*Math.sin(a)).toFixed(1)}return R(40,30,170,120,'#8fd3a8',0,0,8)+'<path d="'+p+'Z" fill="#4a3426" class="fo" style="--d:1.8s"/>'+C(110,80,25,'#4a3426','fi',1.8)+C(110,80,18,'#f4c7a1')};
+V.rep=function(){return PH(40,30,170,120)+R(40,30,170,120,'#8fd3a8','fo',1.2,6)+PE(29,6,1.2)};
+V.cb=function(){return PH(40,35,150,100)+'<rect x="40" y="35" width="150" height="100" rx="6" class="wc" style="mix-blend-mode:multiply;opacity:.45"/>'};
+V.ba=function(){return PH(40,35,150,100)+R(40,35,150,100,'#000','sx',1,6,';opacity:.55')};
+V.sm=function(){return R(30,50,190,26,'#fff',0,0,6,';stroke:#c9cedb;stroke-width:2')+X(40,69,'Sample: Current &amp; Below',14,'fi','#1b2233',.5)+R(30,84,190,22,'#e3eaff','pop',1.2,4)+X(40,100,'All Layers',13,'fi','#5d6678',1.4)+CUR(210,130,60,96,.4)};
+V.op=function(){return C(110,85,52,'#f4c7a1')+C(94,76,5,'#1b2233')+C(126,76,5,'#1b2233')+'<path d="M94 102q16 12 32 0" stroke="#1b2233" stroke-width="3" fill="none"/>'+C(90,95,4,'#d6525f','',0,';opacity:.35')+R(30,150,190,8,'#dfe3ee',0,0,4)+R(30,150,130,8,'#2d5bff',0,0,4)+C(160,154,9,'#fff','pop',.5,SK)+X(168,144,'70%',13,'fi','#2d5bff',1)};
+V.tr=function(){return X(40,100,'Hello',44,'lsp','#2d5bff')+'<path d="M40 120h90" stroke="#1b2233" stroke-width="2" class="pl"/>'};
+V.shp=function(){return '<rect x="60" y="60" width="110" height="46" fill="#2d5bff" class="rxa"/>'+X(80,90,'Button',20,'fi','#fff',.8)};
+V.pr=function(){return R(30,60,190,34,'#fff',0,0,17,';stroke:#2d5bff;stroke-width:2')+X(46,83,'evening sky',16,'ty','#1b2233')+R(150,66,64,22,'#2d5bff','pop',2.6,11)+X(158,82,'Generate',11,'pop','#fff',2.6)+CUR(200,140,182,78,1)};
+V["var"]=function(){var o='';for(var i=0;i<3;i++)o+=G('pop',PH(26+i*76,50,66,50)+(i==1?R(26+i*76,50,66,50,'none','pl',0,6,';stroke:#ffd21f;stroke-width:3'):''),i*.7);return o};
+CL[1][0][3]="Ctrl+N";CL[2][1][3]="Ctrl+J";CL[2][4][3]="Ctrl+T";CL[3][3][3]="X";CL[5][3][3]="Alt";CL[6][0][3]="Ctrl+Enter";
+CL[0].push(["ui:C","กด Space ค้างแล้วลากเพื่อเลื่อนภาพ ใช้ Alt กับลูกกลิ้งเมาส์เพื่อซูมเข้าออก","Hold Space and drag to pan. Use Alt with the scroll wheel to zoom in and out.","Space"],["ui","กด Ctrl+0 ให้ภาพพอดีหน้าจอ และ Ctrl+Z เพื่อย้อนกลับ ลองทำตามได้เลย!","Press Ctrl+0 to fit the screen and Ctrl+Z to undo. Try it yourself!","Ctrl+0"]);
+CL[1].splice(3,0,["cvs","Canvas Size ขยายผ้าใบโดยไม่ยืดภาพ ส่วน Image Size เปลี่ยนจำนวนพิกเซลของภาพ","Canvas Size enlarges the canvas without stretching the image; Image Size changes the pixel count."],["blur","ย่อภาพเสียคุณภาพน้อย แต่ขยายภาพเล็กให้ใหญ่ภาพจะเบลอ","Shrinking costs little quality, but enlarging a small image makes it blurry."]);
+CL[2].splice(3,0,["grp","Ctrl+G รวมหลายเลเยอร์เป็นกลุ่ม พับเก็บให้แผงเลเยอร์เป็นระเบียบ","Ctrl+G groups several layers into one folder to keep the panel tidy.","Ctrl+G"],["lk","ดับเบิลคลิกที่ชื่อเพื่อตั้งชื่อเลเยอร์ และกดไอคอนกุญแจเพื่อล็อกกันแก้พลาด","Double-click a name to rename a layer, and click the lock to prevent accidents."]);
+CL[3].splice(4,0,["edge","ขอบหยาบหรือเส้นผมแหว่ง? ใช้ Feather หรือ Select and Mask ปรับขอบให้เนียน","Rough edges or ragged hair? Use Feather or Select and Mask to refine the edge."],["rep","ลองใส่พื้นหลังใหม่ไว้ใต้เลเยอร์ แล้วดูว่าขอบวัตถุกลมกลืนดีไหม","Place a new background underneath and check that the edges blend well."]);
+CL[4].splice(4,0,["cb","Color Balance เติมโทนอุ่นหรือเย็นให้ภาพ ลองเลื่อนดูว่าอารมณ์ภาพเปลี่ยนไปอย่างไร","Color Balance adds warm or cool tones. Slide it and watch the mood change."],["ba","กดรูปดวงตาของ Adjustment Layer เพื่อเทียบภาพก่อนและหลัง","Click the eye on an Adjustment Layer to compare before and after."]);
+CL[5].splice(4,0,["sm","ตั้งค่า Sample เป็น Current & Below เพื่อให้เครื่องมือรีทัชอ่านภาพจากเลเยอร์ข้างล่างด้วย","Set Sample to Current & Below so retouch tools read from the layers underneath."],["op","ผิวหน้าอย่าให้เรียบเป็นพลาสติก ลด Opacity ของเลเยอร์รีทัชเหลือ 50 ถึง 70 เปอร์เซ็นต์","Do not smooth skin until it looks like plastic. Lower the retouch layer to 50–70% opacity."]);
+CL[6].splice(2,0,["tr","แผง Character ปรับระยะตัวอักษร (Tracking) ให้โปร่งหรือชิดขึ้นตามความเหมาะสม","The Character panel adjusts letter spacing (Tracking), airy or tight as you need."]);
+CL[6].splice(5,0,["shp","Rectangle Tool (U) วาดปุ่มหรือกรอบ ปรับมุมโค้งได้ที่แผง Properties","Rectangle Tool (U) draws buttons and frames; adjust corner radius in Properties.","U"]);
+CL[7].splice(1,0,["pr","พิมพ์คำสั่งสั้นๆ ให้ชัดเจน เช่น ท้องฟ้ายามเย็น หรือปล่อยว่างไว้ถ้าต้องการลบวัตถุ","Type a short, clear prompt such as “evening sky”, or leave it empty to remove an object."]);
+CL[7].splice(3,0,["var","ผลลัพธ์มีให้เลือกหลายแบบ แต่ละแบบเป็นเลเยอร์แยก ลองเปรียบเทียบแล้วเลือกที่ชอบ","You get several variations, each on its own layer. Compare and pick your favorite."]);
+
+var HS=document.getElementById("hs"),NS="http://www.w3.org/2000/svg",I0={fill:"#000",stroke:"none",sw:"1",lc:"butt",da:"none",off:0},PAT=null;
+function E(p){return p*p*(3-2*p)}
+function pg(t,d,u){return Math.max(0,Math.min(1,(t-d)/u))}
+function tri(u){u=u%2;return u<1?u:2-u}
+function nz(v,d){v=parseFloat(v);return isNaN(v)?d:v}
+function gv(el,n){var s=el._s;if(!s){s=el._s={};(el.getAttribute("style")||"").split(";").forEach(function(x){var k=x.indexOf(":");if(k>0)s[x.slice(0,k).trim()]=x.slice(k+1).trim()})}var v=s[n];return v!==undefined?v:el.getAttribute(n)}
+function bb(el){if(!el._b){try{el._b=el.getBBox()}catch(e){el._b={x:0,y:0,width:0,height:0}}}return el._b}
+function col(c,v){if(v&&v.indexOf("url(")==0){if(!PAT){var k=document.createElement("canvas");k.width=k.height=16;var g=k.getContext("2d");g.fillStyle="#fff";g.fillRect(0,0,16,16);g.fillStyle="#cfd3dc";g.fillRect(0,0,8,8);g.fillRect(8,8,8,8);PAT=c.createPattern(k,"repeat")}return PAT}return v}
+function mixc(a,b,m){var f=function(h){return[1,3,5].map(function(i){return parseInt(h.substr(i,2),16)})},x=f(a),y=f(b);return "rgb("+x.map(function(v,i){return Math.round(v+(y[i]-v)*m)}).join(",")+")"}
+function rr(p,x,y,w,h,r){p.moveTo(x+r,y);p.arcTo(x+w,y,x+w,y+h,r);p.arcTo(x+w,y+h,x,y+h,r);p.arcTo(x,y+h,x,y,r);p.arcTo(x,y,x+w,y,r);p.closePath()}
+function D(el,T,c,I,TK){
+var tg=el.tagName.toLowerCase();if(tg=="defs"||tg=="symbol")return;
+var cl=el.getAttribute("class")||"",d=nz(gv(el,"--d"),0),b,u,o=1,tx=0,ty=0,sx=1,sy=1,r=0,ox=0,oy=0,fl="",Z={},
+P={fill:gv(el,"fill")||I.fill,stroke:gv(el,"stroke")||I.stroke,sw:gv(el,"stroke-width")||I.sw,lc:gv(el,"stroke-linecap")||I.lc,da:gv(el,"stroke-dasharray")||I.da,off:I.off};
+if(cl){b=bb(el);ox=b.x+b.width/2;oy=b.y+b.height/2;switch(cl){
+case"fi":o=E(pg(T,d,.6));break;
+case"fo":o=1-E(pg(T,d,.6));break;
+case"pop":u=pg(T,d,.5);sx=sy=u<.6?E(u/.6)*1.15:1.15-.15*E((u-.6)/.4);break;
+case"sl":u=E(pg(T,d,.7));ty=-50*(1-u);o=u;break;
+case"gr":sx=sy=.3+.7*E(pg(T,0,1.2));break;
+case"rt":u=pg(T,0,3);sx=sy=u<.5?.6+.5*E(u/.5):1.1-.1*E((u-.5)/.5);r=u<.5?0:E((u-.5)/.5)*15;break;
+case"sg":u=pg(T,1,4);sx=sy=u<.4?1-.7*E(u/.4):u<.6?.3:.3+.7*E((u-.6)/.4);break;
+case"zb":u=E(pg(T,1,4));sx=sy=1+1.2*u;fl="blur("+2.5*u+"px)";break;
+case"sx":sx=1-E(pg(T,d,3));ox=b.x;break;
+case"br":u=E(pg(T,1,3));fl="brightness("+(.45+.55*u)+") saturate("+(.5+.5*u)+")";break;
+case"dk":fl="brightness(.45) saturate(.5)";break;
+case"sa":fl="grayscale("+(1-E(pg(T,1,3)))+")";break;
+case"pl":o=1-.7*(.5-.5*Math.cos(6.2832*T/1.1));break;
+case"mc":P.da="6 4";Z.off=-((T%.5)/.5)*10;break;
+case"dr":Z.dr=E(pg(T,d,2));break;
+case"ty":Z.ty=Math.floor(pg(T,d,2.5)*10)/10;break;
+case"lsp":u=T-1;Z.ls=u>0?10*E(tri(u/3)):0;break;
+case"rxa":Z.rx=23*E(pg(T,.3,3));break;
+case"wc":P.fill=mixc("#ff9a3c","#3c9aff",tri((T%4)/2));break;
+case"rip":u=pg(T,d,.7);o=T<d?0:1-u;sx=sy=1+6*u;break;
+case"kp":u=T-d;if(u>0&&u<1)ty=3*Math.sin(Math.PI*((u%.5)/.5));break;
+case"mb":ty=-4*(.5-.5*Math.cos(6.2832*T/1.6));break;
+case"bl":u=(T%4)/4;sy=u<.92?1:u<.96?1-.9*(u-.92)/.04:.1+.9*(u-.96)/.04;break;
+case"mth":if(TK)sy=1+.8*E(tri(T/.28));break;
+case"arm":ox=b.x;oy=b.y+b.height;if(TK)r=-25*E(tri(T/.7));break;
+case"cur":u=E(pg(T,d,1.6));tx=nz(gv(el,"--x1"),0)+(nz(gv(el,"--x2"),0)-nz(gv(el,"--x1"),0))*u;ty=nz(gv(el,"--y1"),0)+(nz(gv(el,"--y2"),0)-nz(gv(el,"--y1"),0))*u;ox=oy=0;break}}
+if(Z.off!==undefined)P.off=Z.off;
+c.save();
+var tr=el.getAttribute("transform");if(tr)tr.replace(/(\w+)\(([^)]*)\)/g,function(_,f,a){a=a.trim().split(/[\s,]+/).map(Number);if(f=="translate")c.translate(a[0],a[1]||0);else if(f=="scale")c.scale(a[0],a.length>1?a[1]:a[0])});
+if(tx||ty)c.translate(tx,ty);
+if(sx!=1||sy!=1||r){c.translate(ox,oy);if(r)c.rotate(r*Math.PI/180);c.scale(sx,sy);c.translate(-ox,-oy)}
+c.globalAlpha*=o*nz(gv(el,"opacity"),1);if(fl)c.filter=fl;var bm=gv(el,"mix-blend-mode");if(bm)c.globalCompositeOperation=bm;
+if(tg=="g"){[].forEach.call(el.children,function(k){D(k,T,c,P,TK)})}
+else if(tg=="use"){var rf=document.querySelector(el.getAttribute("href"));if(rf)D(rf,T,c,P,TK)}
+else{var p=el._p,f=P.fill,hf=f&&f!="none",hs=P.stroke&&P.stroke!="none";
+if(tg=="path"){if(!p)p=el._p=new Path2D(el.getAttribute("d"))}
+else if(tg=="rect"){if(!p||Z.rx!==undefined){var w=nz(gv(el,"width"),0),h=nz(gv(el,"height"),0),q=Z.rx!==undefined?Z.rx:nz(gv(el,"rx"),0);p=el._p=new Path2D();rr(p,nz(gv(el,"x"),0),nz(gv(el,"y"),0),w,h,Math.min(q,w/2,h/2))}}
+else if(tg=="circle"){if(!p){p=el._p=new Path2D();p.arc(nz(gv(el,"cx"),0),nz(gv(el,"cy"),0),nz(gv(el,"r"),0),0,6.2832)}}
+else if(tg=="ellipse"){if(!p){p=el._p=new Path2D();p.ellipse(nz(gv(el,"cx"),0),nz(gv(el,"cy"),0),nz(gv(el,"rx"),0),nz(gv(el,"ry"),0),0,0,6.2832)}}
+if(p){if(hf){c.fillStyle=col(c,f);c.fill(p)}
+if(hs){c.strokeStyle=P.stroke;c.lineWidth=nz(P.sw,1);c.lineCap=P.lc||"butt";var da=P.da&&P.da!="none"?P.da.split(/[\s,]+/).map(Number):[];if(Z.dr!==undefined){var Ln=el.getTotalLength();da=[Ln,Ln];c.lineDashOffset=Ln*(1-Z.dr)}else c.lineDashOffset=P.off||0;c.setLineDash(da);c.stroke(p)}}
+else if(tg=="text"){c.font=(gv(el,"font-weight")||"400")+" "+nz(gv(el,"font-size"),14)+"px Prompt,'IBM Plex Sans Thai',sans-serif";if(Z.ls!==undefined&&("letterSpacing" in c))c.letterSpacing=Z.ls+"px";if(Z.ty!==undefined){var qb=bb(el);c.beginPath();c.rect(qb.x-2,qb.y-2,(qb.width+4)*Z.ty,qb.height+4);c.clip()}if(hf){c.fillStyle=col(c,f);c.fillText(el.textContent,nz(gv(el,"x"),0),nz(gv(el,"y"),0))}}}
+c.restore()}
+var MB=null,NT=0,BAR=0,CH=[[261.6,329.6,392,493.9],[220,261.6,329.6,392],[174.6,220,261.6,329.6],[196,246.9,293.7,392]],AP=[0,2,1,3,2,1,3,2];
+function mbus(){if(MB||!AC)return;MB=AC.createGain();MB.gain.value=.55;var lp=AC.createBiquadFilter(),cv=AC.createConvolver(),n=Math.floor(AC.sampleRate*2.2),b=AC.createBuffer(2,n,AC.sampleRate),w=AC.createGain(),c,d,i;lp.type="lowpass";lp.frequency.value=2200;w.gain.value=.45;for(c=0;c<2;c++){d=b.getChannelData(c);for(i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,3)}cv.buffer=b;MB.connect(lp);lp.connect(AC.destination);lp.connect(cv);cv.connect(w);w.connect(AC.destination)}
+function note(f,t0,d,v,ty){var o=AC.createOscillator(),g=AC.createGain();o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(.0001,t0);g.gain.linearRampToValueAtTime(v,t0+(d>1.5?.9:.012));g.gain.exponentialRampToValueAtTime(.0008,t0+d);o.connect(g);g.connect(MB);o.start(t0);o.stop(t0+d+.05)}
+function msch(){if(!AC||!MB)return;MB.gain.setTargetAtTime(CP.some(function(c){return c.sk()})?.22:.55,AC.currentTime,.4);if(!SND)return;if(!NT||NT<AC.currentTime)NT=AC.currentTime+.05;while(NT<AC.currentTime+.5){var st=BAR%8,ch=CH[Math.floor(BAR/8)%4],t0=NT;if(st==0)ch.forEach(function(f,i){note(i?f:f/2,t0,3.4,.022,"sine");note(f*1.003,t0,3.4,.012,"triangle")});note(ch[AP[st]]*2,t0,1.1,.05,"sine");if(st%4==2)note(ch[3]*4,t0,.6,.012,"sine");NT+=.4;BAR++}}
+var HUM=[[/Photoshop/gi,"โฟโต้ช็อป"],[/Ctrl/g,"คอนโทรล"],[/Alt/g,"ออลต์"],[/Shift/g,"ชิฟต์"],[/Enter/g,"เอนเตอร์"],[/Space/g,"สเปซบาร์"],[/Layers?/g,"เลเยอร์"],[/Mask/g,"มาสก์"],[/Adjustment/g,"แอดจัสต์เมนต์"],[/Opacity/g,"โอพาซิตี้"],[/Blend Mode/g,"เบลนด์โหมด"],[/Multiply/g,"มัลติพลาย"],[/Curves/g,"เคิร์ฟ"],[/Levels/g,"เลเวล"],[/Vibrance/g,"ไวเบรนซ์"],[/Color Balance/g,"คัลเลอร์บาลานซ์"],[/Clone Stamp/g,"โคลนสแตมป์"],[/Smart Object/g,"สมาร์ทออบเจกต์"],[/Generative Fill/g,"เจเนอเรทีฟฟิล"],[/Generative Expand/g,"เจเนอเรทีฟเอ็กซ์แพนด์"],[/Select Subject/g,"ซีเลกต์ซับเจกต์"],[/Remove Tool/g,"รีมูฟทูล"],[/Properties/g,"พร็อพเพอร์ตีส์"],[/Options bar/g,"ออปชันบาร์"],[/Window/g,"วินโดว์"],[/ppi/g,"พีพีไอ"],[/RGB/g,"อาร์จีบี"],[/CMYK/g,"ซีเอ็มวายเค"],[/PSD/g,"พีเอสดี"],[/JPG/g,"เจเพก"],[/PNG/g,"พีเอ็นจี"],[/px/g,"พิกเซล"],[/\+/g," "],[/×/g,"คูณ"]];
+function spk_(t){if(L=="th")HUM.forEach(function(h){t=t.replace(h[0],h[1])});else t=t.replace(/Ctrl/g,"Control").replace(/\+/g," plus ").replace(/ppi/g,"P P I");return t}
+function Clip(box,sc,n){
+box.innerHTML='<div class="chd"></div><canvas width="640" height="360" role="img" aria-label="animation"></canvas><div class="cap" aria-live="polite"></div><div class="nv" data-k="nv"></div><div class="ctl"><button class="pb" aria-label="play/pause"></button><button class="rs" aria-label="restart">↺</button><button class="vo" aria-label="sound" aria-pressed="false">🔊</button><div class="sd"></div><div class="pg"><i></i></div><span class="tm"></span></div>';
+var $=function(c){return box.querySelector(c)},cv=$("canvas"),cx=cv.getContext("2d"),sg=document.createElementNS(NS,"g"),mg=document.createElementNS(NS,"g"),cap=$(".cap"),sd=$(".sd"),pb=$(".pb"),tot=sc.length*DUR,i=0,t=0,base=0,gen=0,run=false,man=false,fin=false,TO=[],cw=[],ce=[],spk=false,dn=null,sp=false,st0=false,sf=0,st=0,s0=0,sdur=1,me,vis=false,lt=0,acc=0,tk=false;
+HS.appendChild(sg);HS.appendChild(mg);
+sd.innerHTML=sc.map(function(_,k){return '<button aria-label="'+(k+1)+'"></button>'}).join("");
+function size(){var w=Math.round(cv.clientWidth*(window.devicePixelRatio||1));if(w>0&&cv.width!=w){cv.width=w;cv.height=Math.round(w*9/16)}}
+function curT(){return run||t>0?t/1000:6}
+function render(T){var c=cx,k=cv.width/320,g=BG[n],gr=c.createLinearGradient(0,0,320,180);c.setTransform(k,0,0,k,0,0);gr.addColorStop(0,g[0]);gr.addColorStop(1,g[1]);c.fillStyle=gr;c.fillRect(0,0,320,180);c.fillStyle="#fff";c.globalAlpha=.55;[[30,30,16,6],[290,40,11,7],[262,96,20,8],[24,150,13,6]].forEach(function(q){var u=tri(T/q[3]);c.beginPath();c.arc(q[0]+8*u,q[1]-10*u,q[2],0,6.2832);c.fill()});c.globalAlpha=1;c.save();var p=E(pg(T,0,.5));c.globalAlpha=p;c.translate(30*(1-p),0);D(sg,T,c,I0,tk);c.restore();D(mg,T,c,I0,tk)}
+function idx(p){for(var j=0;j<ce.length;j++)if(ce[j]>=p)return j+1;return ce.length}
+function say(){var g=++gen;if(!SND||!SS||!run)return;SS.cancel();var txt=sc[i][L=="th"?1:2],ch=(L=="th"?txt.split(/\s+/):txt.replace(/([.,:;!?])\s+/g,"$1|").split("|")).filter(Boolean),v=pick(),pos=0,ends=ch.map(function(c){pos=txt.indexOf(c,pos)+c.length;return pos});sp=true;st0=false;spk=true;dn=null;
+function go(k){if(g!=gen)return;var lst=k==ch.length-1,u=new SpeechSynthesisUtterance(spk_(ch[k]));u.lang=L=="th"?"th-TH":"en-US";if(v)u.voice=v;u.rate=RATE*(lst?.94:1)*(1+(Math.random()-.5)*.05);u.pitch=(lst?.95:1.03)+(Math.random()-.5)*.05;
+u.onstart=function(){if(g!=gen)return;st0=true;spk=true;sf=k?idx(ends[k-1]):0;st=idx(ends[k]);s0=Date.now();sdur=Math.max(400,ch[k].length*(L=="th"?85:62)/RATE)};
+u.onend=function(){if(g!=gen)return;if(lst){spk=false;dn=t}else setTimeout(function(){go(k+1)},(L=="th"?200:260)+Math.random()*180)};u.onerror=function(){if(g==gen){spk=false;dn=t}};SS.speak(u)}
+go(0)}
+function words(x){try{return Array.from(new Intl.Segmenter(L=="th"?"th":"en",{granularity:"word"}).segment(x),function(y){return y.segment})}catch(e){return x.split(/(\s+)/)}}
+function draw(){gen++;spk=false;dn=null;sp=false;st0=false;sf=st=0;var s=sc[i],a=s[0].split(":");sg.innerHTML=V[a[0]](a[1])+(s[3]?KEY(s[3]):"");mg.innerHTML=MX();
+cap.innerHTML="";cw=words(s[L=="th"?1:2]).map(function(w){var e=document.createElement("span");e.textContent=w;cap.appendChild(e);return e});var q=0;ce=cw.map(function(e){q+=e.textContent.length;return q});
+$(".chd").textContent=L=="th"?"🎬 คลิปสอน: "+secs[n].dataset.t:"🎬 Video lesson: "+TE[n];[].forEach.call(sd.children,function(b,k){b.className=k==i?"on":""});
+TO.forEach(clearTimeout);TO=[];var seen={},c=0;[].forEach.call(sg.querySelectorAll(".pop,.sl,.fi"),function(e){var d=parseFloat(((e.getAttribute("style")||"").split("--d:")[1])||0),k=e.classList.contains("pop")?"pop":e.classList.contains("sl")?"sl":"fi",key=k+Math.round(d*3);if(seen[key]||c>14||d>11)return;seen[key]=1;c++;TO.push(setTimeout(function(){if(run)sfx(k)},d*1000))});
+if(run){sfx("ding");say()}render(curT())}
+function ui(){pb.textContent=run?"⏸":"▶";var e=base+t,all=(!run&&t==0)||dn!==null||(!sp&&t>=NAR),k=all?cw.length:sp?Math.round(sf+(st-sf)*Math.min(1,(Date.now()-s0)/sdur)):Math.round(Math.min(1,t/NAR)*cw.length),T2=Math.max(tot,e),f=function(ms){var q=Math.floor(ms/1000);return Math.floor(q/60)+":"+("0"+q%60).slice(-2)};cw.forEach(function(w,j){w.className=j<k?"on":""});$(".pg i").style.width=e/T2*100+"%";$(".tm").textContent=f(e)+" / "+f(T2);music()}
+function adv(dt){t+=dt;if(sp&&!st0&&t>5000)sp=false;var go=sp?((dn!==null&&t>=Math.max(8000,dn+1500))||t>=26000):t>=DUR;if(go){if(i<sc.length-1){base+=t;i++;t=0;draw()}else{run=false;fin=true;gen++;if(SS)SS.cancel();ui()}}}
+function fr(now,force){var dt=lt?Math.min(100,now-lt):0;lt=now;if(run)adv(dt);tk=run&&(spk||(!sp&&t<NAR));if(force||(vis&&run))render(curT());if(run){acc+=dt;if(acc>150){acc=0;ui()}}}
+function play(){CP.forEach(function(o){if(o!==me&&o.on())o.pause()});if(fin){fin=false;i=0;t=0;base=0;draw()}run=true;lt=0;say();ui()}
+function pause(){run=false;gen++;if(SS)SS.cancel();ui()}
+pb.onclick=function(){if(run){man=true;pause()}else{man=false;play()}};
+$(".rs").onclick=function(){i=0;t=0;base=0;fin=false;man=false;run=true;draw();play()};
+sd.onclick=function(e){var k=[].indexOf.call(sd.children,e.target);if(k>-1){i=k;t=0;base=k*DUR;fin=false;man=false;run=true;draw();play()}};
+$(".vo").onclick=function(){setSnd(!SND)};
+size();if(window.ResizeObserver)new ResizeObserver(function(){size();render(curT())}).observe(box);
+draw();ui();return me={play:play,pause:pause,r:draw,man:function(){return man},on:function(){return run},say:say,sk:function(){return spk},vs:function(v){vis=v},f:fr}}
+var ios=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(e){var c=e.target._c;c.vs(e.isIntersecting);if(e.isIntersecting){if(!c.man())c.play()}else c.pause()})},{threshold:.5}):null;
+[].forEach.call(document.querySelectorAll(".clip"),function(b){var n=+b.dataset.i,c=Clip(b,CL[n],n);b._c=c;CP.push(c);if(ios)ios.observe(b)});
+function loop(now){CP.forEach(function(c){c.f(now)});requestAnimationFrame(loop)}requestAnimationFrame(loop);
+if(document.fonts)document.fonts.ready.then(function(){CP.forEach(function(c){c.f(performance.now(),1)})});
+document.getElementById("sn").onclick=function(){setSnd(!SND)};
+var _a2=apply;apply=function(){_a2();CP.forEach(function(c){c.r()});updSnd();fillV()};
+apply();
+</script>
+</body>
+</html>
